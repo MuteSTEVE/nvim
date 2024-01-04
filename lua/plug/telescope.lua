@@ -3,6 +3,12 @@ local PLUG = {
   dependencies = { 'nvim-lua/plenary.nvim', 'kyazdani42/nvim-web-devicons' },
   lazy = true,
   cmd = "Telescope",
+  keys = {
+    { "<leader>f", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>" },
+    { '<leader>H', "<cmd>Telescope oldfiles theme=ivy<cr>" },
+    { '<leader>b', "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>" },
+    { '<C-f>', "<cmd>Telescope live_grep theme=ivy<cr>" }
+  }
 }
 
 function PLUG.config()
