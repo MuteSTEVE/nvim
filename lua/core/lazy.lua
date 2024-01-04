@@ -18,8 +18,7 @@ end
 
 lazy.setup {
   spec = {
-    -- { import = "plug" },
-    -- { import = "git" },
+    { import = "plug" },
     -- { import = "lsp" },
   },
 
