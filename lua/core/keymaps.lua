@@ -7,7 +7,7 @@ local nr = { noremap = true, silent = false }
 local nrs = { noremap = true, silent = true }
 
 map('n', "<leader>w", "<cmd>w!<CR>", nr)
-map('n', "<S-q>", "<cmd>q!<CR>", nr)
+map('n', "<leader>q", "<cmd>q!<CR>", nr)
 map('n', "<leader>h", "<cmd>noh<CR>", nrs)
 
 -- Make executable files
@@ -39,3 +39,7 @@ map('v', '>', '>gv', nrs)
 -- moving the cursor in insert mode
 map('i', '<C-h>', '<Left>', nrs)
 map('i', '<C-l>', '<Right>', nrs)
+
+--|| Plugins keymaps || --
+-- Telescope
+map('n', '<leader>f', "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>", nrs)
