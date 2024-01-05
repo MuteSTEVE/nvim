@@ -4,10 +4,10 @@ local PLUG = {
   lazy = true,
   cmd = "Telescope",
   keys = {
-    { "<leader>f", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>" },
-    { "<leader>H", "<cmd>Telescope oldfiles theme=ivy<CR>" },
-    { "<leader>b", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<CR>" },
-    { "<C-f>", "<cmd>Telescope live_grep theme=ivy<CR>" }
+    { "<leader>f", function() require("telescope.builtin").find_files(require("telescope.themes").get_dropdown{previewer = false}) end },
+    { "<leader>H", function() require("telescope.builtin").oldfiles(require("telescope.themes").get_ivy{previewer = true}) end },
+    { "<leader>b", function() require("telescope.builtin").buffers(require("telescope.themes").get_dropdown{previewer = false}) end },
+    { "<C-f>", function() require("telescope.builtin").live_grep(require("telescope.themes").get_ivy{previewer = true}) end },
   }
 }
 

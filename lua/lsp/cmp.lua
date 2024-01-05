@@ -8,15 +8,14 @@ local PLUG = {
     { 'hrsh7th/cmp-nvim-lsp', event = "InsertEnter" },
     { 'hrsh7th/cmp-nvim-lua', event = "InsertEnter" },
     { 'saadparwaiz1/cmp_luasnip', event = "InsertEnter" },
+    { 'L3MON4D3/LuaSnip', event = "InsertEnter" },
+    { 'rafamadriz/friendly-snippets', event = "InsertEnter" },
     {
-      'L3MON4D3/LuaSnip',
-      'rafamadriz/friendly-snippets',
-      {
-        'ults-io/vscode-react-javascript-snippets',
-        build = 'yarn install --frozen-lockfile && yarn compile',
-      },
-    }
-  },
+      'ults-io/vscode-react-javascript-snippets',
+      build = 'yarn install --frozen-lockfile && yarn compile',
+      event = "InsertEnter"
+    },
+  }
 }
 
 function PLUG.config()
@@ -37,41 +36,12 @@ function PLUG.config()
   if not icons_ok then
     return
   end
+  local KI = icons.kind_icons
 
   local check_backspace = function()
     local col = vim.fn.col "." - 1
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
   end
-
-  local IK = icons.kind_icons
-  local kind_icons = {
-    Class = IK.Class,
-    Color = IK.Color,
-    Constant = IK.Constant,
-    Constructor = IK.Constructor,
-    Enum = IK.Enum,
-    EnumMember = IK.EnumMember,
-    Event = IK.Event,
-    Field = IK.Field,
-    File = IK.File,
-    Folder = IK.Folder,
-    Function = IK.Function,
-    Interface = IK.Interface,
-    Keyword = IK.Keyword,
-    Method = IK.Method,
-    Module = IK.Module,
-    Namespace = "",
-    Operator = IK.Operator,
-    Property = IK.Property,
-    Reference = IK.Reference,
-    Snippet = IK.Snippet,
-    Struct = IK.Struct,
-    Text = IK.Text,
-    TypeParameter = IK.TypeParameter,
-    Unit = IK.Unit,
-    Value = IK.Value,
-    Variable = IK.Variable,
-  }
 
   local mappings = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -128,7 +98,7 @@ function PLUG.config()
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      vim_item.kind = string.format("%s", KI[vim_item.kind])
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
@@ -177,7 +147,6 @@ function PLUG.config()
         }
       })
   })
-  vim.cmd("highlight Pmenu guibg=NONE")
 end
 
 return PLUG

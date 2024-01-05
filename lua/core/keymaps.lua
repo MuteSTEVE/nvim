@@ -11,6 +11,9 @@ map('n', "<leader>w", "<cmd>w!<CR>", nr)
 map('n', "<leader>q", "<cmd>q!<CR>", nr)
 map('n', "<leader>h", "<cmd>noh<CR>", nrs)
 
+-- Lazy.nvim window
+map('n', '<S-l>', "<cmd>Lazy<CR>", nrs)
+
 -- Make executable files
 map('x', "<leader>x", "<cmd>!chmod +x %<CR>", nrs)
 
@@ -19,23 +22,23 @@ map('n', 'K', "<cmd>move .-2<CR>==", nrs)
 map('n', 'J', "<cmd>move .+1<CR>==", nrs)
 
 -- buffer movement
-map('n', 'Z', '<cmd>bp<CR>', nrs)
-map('n', 'C', '<cmd>bn<CR>', nrs)
-map('n', 'X', '<cmd>bd<CR>', nrs)
+map('n', 'Z', "<cmd>bp<CR>", nrs)
+map('n', 'C', "<cmd>bn<CR>", nrs)
+map('n', 'X', "<cmd>bd<CR>", nrs)
 
 -- Move between panes
-map('n', '<C-h>', '<C-w>h', nrs)
-map('n', '<C-l>', '<C-w>l', nrs)
-map('n', '<C-j>', '<C-w>j', nrs)
-map('n', '<C-k>', '<C-w>k', nrs)
+map('n', '<C-h>', "<C-w>h", nrs)
+map('n', '<C-l>', "<C-w>l", nrs)
+map('n', '<C-j>', "<C-w>j", nrs)
+map('n', '<C-k>', "<C-w>k", nrs)
 
--- remap redo from ctrl+r to just r
-map('n', 'r', '<C-r>', nrs)
+-- remap ctrl+r it doesn't make any sense!
+map('n', 'r', "<C-r>", nrs)
 
 -- Indent
-map('v', '<', '<gv', nrs)
-map('v', '>', '>gv', nrs)
+map('v', '<', "<gv", nrs)
+map('v', '>', ">gv", nrs)
 
 -- moving the cursor in insert mode
-map('i', '<C-h>', '<Left>', nrs)
-map('i', '<C-l>', '<Right>', nrs)
+map('i', '<C-h>', "<Left>", nrs)
+map('i', '<C-l>', "<Right>", nrs)
