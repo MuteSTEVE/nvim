@@ -2,7 +2,7 @@
 vim.g.mapleader = ' '
 
 -- Define map as keybind
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local nr = { noremap = true, silent = false }
 local nrs = { noremap = true, silent = true }
 
@@ -28,6 +28,9 @@ map('n', '<C-h>', '<C-w>h', nrs)
 map('n', '<C-l>', '<C-w>l', nrs)
 map('n', '<C-j>', '<C-w>j', nrs)
 map('n', '<C-k>', '<C-w>k', nrs)
+
+-- remap redo from ctrl+r to just r
+map('n', 'r', '<C-r>', nrs)
 
 -- Indent
 map('v', '<', '<gv', nrs)
