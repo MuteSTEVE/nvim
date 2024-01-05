@@ -1,6 +1,6 @@
 local PLUG = {
   'nvim-telescope/telescope.nvim',
-  dependencies = { 'nvim-lua/plenary.nvim', 'kyazdani42/nvim-web-devicons' },
+  dependencies = { 'nvim-lua/plenary.nvim', 'kyazdani42/nvim-web-devicons', 'nvim-telescope/telescope-ui-select.nvim' },
   lazy = true,
   cmd = "Telescope",
   keys = {
@@ -20,13 +20,17 @@ function PLUG.config()
   if not actions_ok then
     return
   end
+  local themes_ok, themes = pcall(require, "telescope.themes")
+  if not themes_ok then
+    return
+  end
   local icons_ok, icons = pcall(require, 'core.icons')
   if not icons_ok then
     return
   end
   local ITL = icons.telescope
 
-  telescope.setup {
+  telescope.setup({
     defaults = {
       prompt_prefix = ITL.find .. " ",
       selection_caret = ITL.select .. " ",
@@ -40,8 +44,12 @@ function PLUG.config()
           ["<esc>"] = actions.close,
         },
       },
+    },
+    extensions = {
+      ["ui-select"] = { themes.get_dropdown }
     }
-  }
+  })
+  telescope.load_extension("ui-select")
 end
 
 return PLUG

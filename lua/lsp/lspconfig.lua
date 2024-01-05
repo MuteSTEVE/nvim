@@ -12,10 +12,6 @@ function PLUG.config()
   if not builtin_ok then
     return
   end
-  local themes_ok, themes = pcall(require, "telescope.themes")
-  if not themes_ok then
-    return
-  end
   local icons_ok, icons = pcall(require, 'core.icons')
   if not icons_ok then
     return
