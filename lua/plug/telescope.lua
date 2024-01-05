@@ -5,18 +5,18 @@ local PLUG = {
   cmd = "Telescope",
   keys = {
     { "<leader>f", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>" },
-    { '<leader>H', "<cmd>Telescope oldfiles theme=ivy<cr>" },
-    { '<leader>b', "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>" },
-    { '<C-f>', "<cmd>Telescope live_grep theme=ivy<cr>" }
+    { "<leader>H", "<cmd>Telescope oldfiles theme=ivy<cr>" },
+    { "<leader>b", "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>" },
+    { "<C-f>", "<cmd>Telescope live_grep theme=ivy<cr>" }
   }
 }
 
 function PLUG.config()
-  local telescope_ok, telescope = pcall(require, 'telescope')
+  local telescope_ok, telescope = pcall(require, "telescope")
   if not telescope_ok then
     return
   end
-  local actions_ok, actions = pcall(require, 'telescope.actions')
+  local actions_ok, actions = pcall(require, "telescope.actions")
   if not actions_ok then
     return
   end

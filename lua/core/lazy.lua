@@ -10,6 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
+vim.g.mapleader = ' '
 
 local lazy_ok, lazy = pcall(require, "lazy")
 if not lazy_ok then
@@ -19,10 +20,6 @@ end
 lazy.setup {
   spec = {
     { import = "plug" },
-    -- { import = "lsp" },
-  },
-
-  cache = { enabled = true },
-  defaults = { lazy = true },
-  install = { missing = true }
+    { import = "lsp" },
+  }
 }

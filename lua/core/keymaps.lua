@@ -6,16 +6,13 @@ local map = vim.api.nvim_set_keymap
 local nr = { noremap = true, silent = false }
 local nrs = { noremap = true, silent = true }
 
+-- save, quit and no highlight
 map('n', "<leader>w", "<cmd>w!<CR>", nr)
 map('n', "<leader>q", "<cmd>q!<CR>", nr)
 map('n', "<leader>h", "<cmd>noh<CR>", nrs)
 
 -- Make executable files
 map('x', "<leader>x", "<cmd>!chmod +x %<CR>", nrs)
-
--- Lazy and Mason
-map("n", "<S-l>", "<cmd>Lazy<cr>", nrs)
-map("n", "<S-m>", "<cmd>Mason<cr>", nrs)
 
 -- Some useful keybinds VSCode move line keybind
 map('n', 'K', "<cmd>move .-2<CR>==", nrs)
