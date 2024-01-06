@@ -11,6 +11,7 @@ function PLUG.config()
   end
 
   treesitter.setup {
+    auto_install = true,
     ensure_installed = { "bash", "c", "html", "php", "css", "javascript", "lua", "vim", "python" },
     sync_install = true,
     highlight = {

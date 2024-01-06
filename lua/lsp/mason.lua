@@ -25,18 +25,15 @@ function PLUG.config()
     "emmet_language_server",
     "emmet_ls",
     "html",
-    "jedi_language_server",
-    "pyre",
-    "pyright",
-    "pylyzer",
-    "sourcery",
     "pylsp",
     "ruff_lsp",
     "vimls",
     "lua_ls",
   }
 
-  mason.setup()
+  mason.setup({
+    PATH = "prepend",
+  })
   masonlspconfig.setup({
     ensure_installed = servers,
     automatic_installation = true,
