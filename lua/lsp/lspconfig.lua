@@ -29,14 +29,7 @@ function PLUG.config()
   end
 
   local langservers = {
-    "cssls",
-    "cssmodules_ls",
-    "unocss",
-    "emmet_language_server",
-    "emmet_ls",
-    "html",
-    "pylsp",
-    "ruff_lsp",
+    "pyright",
     "vimls",
     "lua_ls",
   }
@@ -78,7 +71,7 @@ function PLUG.config()
   map('n', "<A-f>", function() vim.diagnostic.open_float() end, opts)
   map('n', "[d", function() vim.diagnostic.goto_next() end, opts)
   map('n', "]d", function() vim.diagnostic.goto_prev() end, opts)
-  map('n', "<C-a>", function() vim.lsp.buf.code_action() end, opts)
+  map('n', "<C-a>", function() vim.lsp.buf.code_action() end, {})
   -- map('n', "<C-r>", function() vim.lsp.buf.references() end, opts)
   map('n', "<S-r>", function() vim.lsp.buf.rename() end, opts)
   map('i', "<C-h>", function() vim.lsp.buf.signature_help() end, opts)

@@ -19,21 +19,12 @@ function PLUG.config()
   end
 
   local servers = {
-    "cssls",
-    "cssmodules_ls",
-    "unocss",
-    "emmet_language_server",
-    "emmet_ls",
-    "html",
-    "pylsp",
-    "ruff_lsp",
+    "pyright",
     "vimls",
     "lua_ls",
   }
 
-  mason.setup({
-    PATH = "prepend",
-  })
+  mason.setup({ PATH = "prepend" })
   masonlspconfig.setup({
     ensure_installed = servers,
     automatic_installation = true,
