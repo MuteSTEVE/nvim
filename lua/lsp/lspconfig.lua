@@ -35,12 +35,12 @@ function PLUG.config()
   }
 
   for _, server in ipairs(langservers) do
-    lspconfig[server].setup {
+    lspconfig[server].setup({
       capabilities = capabilities,
-    }
+    })
   end
 
-  lspconfig.lua_ls.setup {
+  lspconfig.lua_ls.setup({
     settings = {
       Lua = {
         workspace = {
@@ -48,7 +48,7 @@ function PLUG.config()
         },
       },
     },
-  }
+  })
 
   local signs = { Error = IS.Error, Warn = IS.Warn, Hint = IS.Hint, Info = IS.Info }
   for type, icon in pairs(signs) do

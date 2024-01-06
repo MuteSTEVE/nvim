@@ -19,7 +19,7 @@ function PLUG.config()
   end
   cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
 
-  autopairs.setup {
+  autopairs.setup({
     check_ts = true,
     ts_config = {
       lua = { "string", "source" },
@@ -38,7 +38,7 @@ function PLUG.config()
       highlight = "PmenuSel",
       highlight_grey = "LineNr",
     },
-  }
+  })
 end
 
 return PLUG

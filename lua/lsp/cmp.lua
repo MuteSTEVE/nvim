@@ -110,7 +110,7 @@ function PLUG.config()
     end,
   }
 
-  cmp.setup {
+  cmp.setup({
     snippet = {
       expand = function(args)
         luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -123,7 +123,7 @@ function PLUG.config()
       behavior = cmp.ConfirmBehavior.Replace,
       select = false,
     },
-  }
+  })
 
   -- Use buffer source for '/', '?', ':'
   cmp.setup.cmdline({ '/', '?', ':' }, {

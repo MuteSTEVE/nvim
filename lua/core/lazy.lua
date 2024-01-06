@@ -17,9 +17,12 @@ if not lazy_ok then
   return
 end
 
-lazy.setup {
+-- Lazy.nvim window
+vim.keymap.set('n', '<S-l>', "<cmd>Lazy<CR>", {noremap = true, silent = true})
+
+lazy.setup({
   spec = {
     { import = "plug" },
     { import = "lsp" },
   }
-}
+})

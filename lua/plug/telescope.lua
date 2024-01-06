@@ -26,7 +26,7 @@ function PLUG.config()
   end
   local ITL = icons.telescope
 
-  telescope.setup {
+  telescope.setup({
     defaults = {
       prompt_prefix = ITL.find .. " ",
       selection_caret = ITL.select .. " ",
@@ -41,7 +41,7 @@ function PLUG.config()
         },
       },
     }
-  }
+  })
 end
 
 return PLUG
