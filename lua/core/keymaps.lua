@@ -11,9 +11,6 @@ map('n', "<leader>w", "<cmd>w!<CR>", nr)
 map('n', "<leader>q", "<cmd>q!<CR>", nr)
 map('n', "<leader>h", "<cmd>noh<CR>", nrs)
 
--- Lazy.nvim window
-map('n', '<S-l>', "<cmd>Lazy<CR>", nrs)
-
 -- Make executable files
 map('x', "<leader>x", "<cmd>!chmod +x %<CR>", nrs)
 
