@@ -53,6 +53,7 @@ function PLUG.config()
           ["<C-r>"] = fb_actions.rename,
           ["<C-d>"] = fb_actions.remove,
           ["<C-y>"] = fb_actions.copy,
+          ["<C-w>"] = fb_actions.change_cwd,
         },
       },
     }
