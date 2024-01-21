@@ -28,7 +28,7 @@ local percentage = "%p%%"
 vim.cmd("set laststatus=3")
 vim.opt.statusline = background ..
 spc..spc..spc..
-branch ..spc.. file_name ..spc.. modified ..spc.. read_only ..
+branch ..spc..spc.. file_name ..spc.. modified ..spc.. read_only ..
 align_right..
 file_type ..spc..spc.. file_encoding ..spc..spc.. file_format ..spc..spc.. lc ..spc.. percentage ..
 spc..spc..spc
