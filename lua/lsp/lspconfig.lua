@@ -32,6 +32,7 @@ function PLUG.config()
     "pyright",
     "vimls",
     "lua_ls",
+    "marksman",
   }
 
   for _, server in ipairs(langservers) do
@@ -39,6 +40,8 @@ function PLUG.config()
       capabilities = capabilities,
     })
   end
+
+  lspconfig.marksman.setup({})
 
   lspconfig.lua_ls.setup({
     settings = {
@@ -74,7 +77,7 @@ function PLUG.config()
   map('n', "<C-a>", function() vim.lsp.buf.code_action() end, {})
   -- map('n', "<C-r>", function() vim.lsp.buf.references() end, opts)
   map('n', "<S-r>", function() vim.lsp.buf.rename() end, opts)
-  map('i', "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+  map('i', "<A-h>", function() vim.lsp.buf.signature_help() end, opts)
 end
 
 return PLUG

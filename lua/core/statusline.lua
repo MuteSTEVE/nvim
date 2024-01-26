@@ -4,7 +4,7 @@ local function shell(command)
     local icon = "󰘬 "
     handle:close()
     if string.len(result) > 0 then
-      return icon .. result
+      return icon .. result .. " " .. " "
     else
       return ""
     end
@@ -28,7 +28,7 @@ local percentage = "%p%%"
 vim.cmd("set laststatus=3")
 vim.opt.statusline = background ..
 spc..spc..spc..
-branch ..spc..spc.. file_name ..spc.. modified ..spc.. read_only ..
+branch .. file_name ..spc.. modified ..spc.. read_only ..
 align_right..
 file_type ..spc..spc.. file_encoding ..spc..spc.. file_format ..spc..spc.. lc ..spc.. percentage ..
 spc..spc..spc
