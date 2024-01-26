@@ -22,6 +22,7 @@ function PLUG.config()
     "pyright",
     "vimls",
     "lua_ls",
+    "marksman",
   }
 
   mason.setup({ PATH = "prepend" })

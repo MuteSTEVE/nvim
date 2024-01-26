@@ -12,7 +12,7 @@ function PLUG.config()
 
   treesitter.setup({
     auto_install = true,
-    ensure_installed = { "bash", "lua", "vim", "python" },
+    ensure_installed = { "bash", "lua", "vim", "python", "markdown", "markdown_inline" },
     sync_install = true,
     highlight = {
       enable = true,
