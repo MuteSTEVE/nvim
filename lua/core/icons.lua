@@ -1,4 +1,9 @@
 return {
+  git = {
+    signs = "▌",
+    branch = "󰘬 "
+  },
+
   telescope = {
     find = " 󰍉",
     select = ""

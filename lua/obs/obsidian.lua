@@ -15,11 +15,11 @@ function PLUG.config()
 
   obsidian.setup({
     workspaces = {
-      {
-        -- Put other notes directory here
-        name = "Learn_Japanese",
-        path = "~/Documents/Learn_Japanese/",
-      },
+      -- DON'T REMOVE THIS LINE OR ELSE CROSS-REFERENCE WON'T WORK
+      -- Put other notes directory here
+    { name = "Learn_Japanese", path = "~/Documents/VAULT/Learn_Japanese/" },
+    { name = "Math", path = "~/Documents/VAULT/Math/" },
+    { name = "life", path = "~/Documents/VAULT/life/" },
     },
     detect_cwd = false,
     notes_subdir = "notes",
@@ -128,10 +128,8 @@ function PLUG.config()
         local link_path
         local vault_relative_path = client:vault_relative_path(path)
         if vault_relative_path ~= nil then
-          -- Use relative path if the image is saved in the vault dir.
           link_path = vault_relative_path
         else
-          -- Otherwise use the absolute path.
           link_path = tostring(path)
         end
         local display_name = vim.fs.basename(link_path)

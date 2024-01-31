@@ -1,7 +1,13 @@
+local icons_ok, icons = pcall(require, 'core.icons')
+if not icons_ok then
+  return
+end
+local GIT = icons.git
+
 local function shell(command)
     local handle = io.popen(command)
     local result = handle:read("*a")
-    local icon = "󰘬 "
+    local icon = GIT.branch
     handle:close()
     if string.len(result) > 0 then
       return icon .. result .. " " .. " "
