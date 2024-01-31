@@ -9,7 +9,6 @@ local PLUG = {
   cmd = "Telescope",
   keys = {
     { "<leader>f", function() require("telescope.builtin").find_files(require("telescope.themes").get_dropdown{previewer = false}) end },
-    { "<C-b>", function() require("telescope").extensions.file_browser.file_browser({previewer = false}) end },
     { "<leader>H", function() require("telescope.builtin").oldfiles(require("telescope.themes").get_ivy{previewer = true}) end },
     { "<leader>b", function() require("telescope.builtin").buffers(require("telescope.themes").get_dropdown{previewer = false}) end },
     { "<C-f>", function() require("telescope.builtin").live_grep(require("telescope.themes").get_ivy{previewer = true}) end },
@@ -25,17 +24,16 @@ function PLUG.config()
   if not actions_ok then
     return
   end
-  local fb_actions = telescope.extensions.file_browser.actions
   local icons_ok, icons = pcall(require, 'core.icons')
   if not icons_ok then
     return
   end
-  local ITL = icons.telescope
+  local TL = icons.telescope
 
   telescope.setup({
     defaults = {
-      prompt_prefix = ITL.find .. " ",
-      selection_caret = ITL.select .. " ",
+      prompt_prefix = TL.find .. " ",
+      selection_caret = TL.select .. " ",
       mappings = {
         i = {
           ["<C-j>"] = actions.move_selection_next,
@@ -45,20 +43,10 @@ function PLUG.config()
           ["<leader>b"] = actions.close,
           ["<C-b>"] = actions.close,
           ["<Esc>"] = actions.close,
-
-          -- file_browser
-          ["~"] = fb_actions.goto_home_dir,
-          ["<C-h>"] = fb_actions.toggle_hidden,
-          ["<C-c>"] = fb_actions.create,
-          ["<C-r>"] = fb_actions.rename,
-          ["<C-d>"] = fb_actions.remove,
-          ["<C-y>"] = fb_actions.copy,
-          ["<C-w>"] = fb_actions.change_cwd,
         },
       },
     }
   })
-  telescope.load_extension "file_browser"
 end
 
 return PLUG
