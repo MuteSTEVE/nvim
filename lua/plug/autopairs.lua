@@ -1,6 +1,5 @@
 local PLUG = {
   'windwp/nvim-autopairs',
-  lazy = true,
   event = "InsertEnter"
 }
 

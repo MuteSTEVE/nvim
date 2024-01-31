@@ -1,6 +1,5 @@
 local PLUG = {
   'williamboman/mason.nvim',
-  lazy = true,
   dependencies = 'williamboman/mason-lspconfig.nvim',
   cmd = "Mason",
   keys = {

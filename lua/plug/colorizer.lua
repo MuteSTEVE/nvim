@@ -1,6 +1,5 @@
 local PLUG = {
   'NvChad/nvim-colorizer.lua',
-  lazy = true,
   event = { "BufReadPost", "BufNewFile" }
 }
 

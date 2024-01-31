@@ -1,6 +1,5 @@
 local PLUG = {
   'echasnovski/mini.nvim',
-  lazy = true,
   event = { "BufReadPost", "BufNewFile" },
 }
 

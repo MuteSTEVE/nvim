@@ -4,7 +4,6 @@ local PLUG = {
     'nvim-lua/plenary.nvim',
     'kyazdani42/nvim-web-devicons'
   },
-  lazy = true,
   cmd = "Telescope",
   keys = {
     { "<leader>f", function() require("telescope.builtin").find_files(require("telescope.themes").get_dropdown{previewer = false}) end },

@@ -1,6 +1,5 @@
 local VSCODE = {
   'LunarVim/darkplus.nvim',
-  lazy = false,
   priority = 1000
 }
 

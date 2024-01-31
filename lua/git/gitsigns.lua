@@ -1,6 +1,6 @@
 local PLUG = {
   'lewis6991/gitsigns.nvim',
-  event = { "BufReadPost", "BufNewFile" }
+  event = { "BufReadPost", "BufNewFile" },
 }
 
 function PLUG.config()
