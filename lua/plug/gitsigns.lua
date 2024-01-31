@@ -16,13 +16,15 @@ function PLUG.config()
 
   gitsigns.setup {
     signs = {
-      add = { hl = "GitSignsAdd", text = GIT.signs, numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-      change = { hl = "GitSignsChange", text = GIT.signs, numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
-      delete = { hl = "GitSignsDelete", text = GIT.signs, numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-      topdelete = { hl = "GitSignsDelete", text = GIT.signs, numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
-      changedelete = { hl = "GitSignsChange", text = GIT.signs, numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+      add = { text = GIT.signs },
+      change = { text = GIT.signs },
+      delete = { text = GIT.signs },
+      topdelete = { text = GIT.signs },
+      changedelete = { text = GIT.signs },
     },
   }
+
+  vim.keymap.set('n', "<A-g>", '<cmd>Gitsigns preview_hunk<CR>', { silent = true} )
 end
 
 return PLUG
