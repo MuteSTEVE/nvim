@@ -21,7 +21,7 @@ lazy.setup({
   spec = {
     { import = "plug" },
     { import = "lsp" },
-    { import = "obs" }
+    { import = "git" }
   }
 })
 
