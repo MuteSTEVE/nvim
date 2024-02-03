@@ -1,16 +1,62 @@
+-- Local autogroup & autocmd
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+local clear = { clear = true }
+
 -- Disable statusline in terminal mode with autocmd
-vim.cmd([[
-  augroup statusline_terminal
-    autocmd!
-    autocmd TermEnter * set laststatus=0
-    autocmd TermLeave * set laststatus=3
-  augroup END
-]])
+augroup("statusline_terminal", clear)
+autocmd(
+  "TermEnter", {
+    group = "statusline_terminal",
+    pattern = "*",
+    command = "set laststatus=0"
+  }
+)
+autocmd(
+  "TermLeave", {
+    group = "statusline_terminal",
+    pattern = "*",
+    command = "set laststatus=3"
+  }
+)
+
+-- Auto-indent html, php and javascript files
+augroup("autoindent", clear)
+autocmd(
+  "BufWritePre", {
+    group = "autoindent",
+    pattern = "*.html",
+    command = "normal mMgg=G'M"
+  }
+)
+autocmd(
+  "BufWritePre", {
+    group = "autoindent",
+    pattern = "*.php",
+    command = "normal mMgg=G'M"
+  }
+)
+autocmd(
+  "BufWritePre", {
+    group = "autoindent",
+    pattern = "*.js",
+    command = "normal mMgg=G'M"
+  }
+)
 
 -- Remove trailing_space on lua and python file
-vim.cmd([[
-  augroup trailing_space
-    autocmd BufWritePre *.py :%s/\s\+$//e
-    autocmd BufWritePre *.lua :%s/\s\+$//e
-  augroup END
-]])
+augroup("trailing_space", clear)
+autocmd(
+  "BufWritePre", {
+    group = "trailing_space",
+    pattern = "*.py",
+    command = [[%s/\s\+$//e]]
+  }
+)
+autocmd(
+  "BufWritePre", {
+    group = "trailing_space",
+    pattern = "*.lua",
+    command = [[%s/\s\+$//e]]
+  }
+)

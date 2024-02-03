@@ -49,3 +49,7 @@ vim.o.guicursor = table.concat({
   "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
   "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
 }, ",")
+
+if not vim.fn.exists('guin running') then
+  vim.o.t_Co = 256
+end
