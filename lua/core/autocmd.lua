@@ -25,21 +25,7 @@ augroup("autoindent", clear)
 autocmd(
   "BufWritePre", {
     group = "autoindent",
-    pattern = "*.html",
-    command = "normal mMgg=G'M"
-  }
-)
-autocmd(
-  "BufWritePre", {
-    group = "autoindent",
-    pattern = "*.php",
-    command = "normal mMgg=G'M"
-  }
-)
-autocmd(
-  "BufWritePre", {
-    group = "autoindent",
-    pattern = "*.js",
+    pattern = { "*.html", "*.php", "*.js"},
     command = "normal mMgg=G'M"
   }
 )
@@ -49,14 +35,7 @@ augroup("trailing_space", clear)
 autocmd(
   "BufWritePre", {
     group = "trailing_space",
-    pattern = "*.py",
-    command = [[%s/\s\+$//e]]
-  }
-)
-autocmd(
-  "BufWritePre", {
-    group = "trailing_space",
-    pattern = "*.lua",
+    pattern = { "*.py", "*.lua"},
     command = [[%s/\s\+$//e]]
   }
 )
