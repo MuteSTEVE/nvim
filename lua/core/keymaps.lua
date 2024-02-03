@@ -39,5 +39,14 @@ map('v', '>', ">gv", nrs)
 -- moving the cursor in insert mode
 map('i', '<C-h>', "<Left>", nrs)
 map('i', '<C-l>', "<Right>", nrs)
-map('n', '<A-o>', "O<Esc>O")
-map('n', '<A-S-o>', "o<Esc>o")
+
+-- Autopairs insert mode
+map("i", "'", "''<left>", nrs)
+map('i', '"', '""<left>', nrs)
+map('i', '(', "()<left>", nrs)
+map('i', '[', "[]<left>", nrs)
+map('i', '{', "{}<left>", nrs)
+
+-- Terminal mode
+map('n', '<leader>r', "<cmd>term ranger<CR>", nrs)
+map('n', '<leader>g', "<cmd>term lazygit<CR>", nrs)

@@ -9,7 +9,7 @@ function PLUG.config()
     return
   end
 
-  colorizer.setup()
+  colorizer.setup({})
 end
 
 return PLUG
