@@ -35,14 +35,6 @@ function PLUG.config()
   map('t', '<leader>r', '<C-\\><C-n><cmd>q!<CR>', nr)
   map('t', '<leader>g', '<C-\\><C-n><cmd>q!<CR>', nr)
 
-  -- Disable statusline in terminal mode with autocmd
-  vim.cmd([[
-    augroup statusline_terminal
-    autocmd!
-    autocmd TermEnter * set laststatus=0
-    autocmd TermLeave * set laststatus=3
-    augroup END
-  ]])
 end
 
 return PLUG
