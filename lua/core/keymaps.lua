@@ -40,13 +40,6 @@ map('v', '>', ">gv", nrs)
 map('i', '<C-h>', "<Left>", nrs)
 map('i', '<C-l>', "<Right>", nrs)
 
--- Autopairs insert mode
-map("i", "'", "''<left>", nrs)
-map('i', '"', '""<left>', nrs)
-map('i', '(', "()<left>", nrs)
-map('i', '[', "[]<left>", nrs)
-map('i', '{', "{}<left>", nrs)
-
 -- Terminal mode
 map('n', '<leader>r', "<cmd>term ranger<CR>", nrs)
 map('n', '<leader>g', "<cmd>term lazygit<CR>", nrs)
