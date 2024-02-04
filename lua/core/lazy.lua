@@ -18,7 +18,6 @@ if not lazy_ok then
 end
 
 lazy.setup({
-  ui = { border = "rounded" },
   spec = {
     { import = "plug" },
     { import = "lsp" },

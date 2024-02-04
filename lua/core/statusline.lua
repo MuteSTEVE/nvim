@@ -5,15 +5,15 @@ end
 local GIT = icons.git
 
 local function shell(command)
-    local handle = io.popen(command)
-    local result = handle:read("*a")
-    local icon = GIT.branch
-    handle:close()
-    if string.len(result) > 0 then
-      return icon .. result .. " " .. " "
-    else
-      return ""
-    end
+  local handle = io.popen(command)
+  local result = handle:read("*a")
+  local icon = GIT.branch
+  handle:close()
+  if string.len(result) > 0 then
+    return icon .. result .. " " .. " "
+  else
+    return ""
+  end
 end
 
 local background = "%#background#"
@@ -31,6 +31,7 @@ local file_format = "%{&fileformat}"
 local lc = "%l" .. ":" .. "%c"
 local percentage = "%p%%"
 
+vim.cmd("highlight background guibg=#1C1C1C guifg=white")
 vim.cmd("set laststatus=3")
 vim.opt.statusline = background ..
 spc..spc..spc..

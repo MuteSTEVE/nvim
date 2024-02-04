@@ -50,6 +50,8 @@ vim.o.guicursor = table.concat({
   "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
 }, ",")
 
+vim.cmd("colorscheme habamax")
+
 if not vim.fn.exists('guin running') then
   vim.o.t_Co = 256
 end
