@@ -39,7 +39,3 @@ map('v', '>', ">gv", nrs)
 -- moving the cursor in insert mode
 map('i', '<C-h>', "<Left>", nrs)
 map('i', '<C-l>', "<Right>", nrs)
-
--- Terminal mode
-map('n', '<leader>r', "<cmd>term ranger<CR>", nrs)
-map('n', '<leader>g', "<cmd>term lazygit<CR>", nrs)

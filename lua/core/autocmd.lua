@@ -52,7 +52,7 @@ autocmd( "BufWritePre", {
 autocmd( "BufWritePre", {
   group = "FileFormat",
   pattern = { "*.py", "*.lua"},
-  command = [[%s/\s\+$//e]]
+  command = [[%s/\s\+$//e | normal mMgg=G'M]]
 })
 
 -- CustomBuffer

@@ -18,11 +18,36 @@ if not lazy_ok then
 end
 
 lazy.setup({
+  ui = {
+    border = "rounded"
+  },
   spec = {
     { import = "plug" },
     { import = "lsp" },
     { import = "git" }
-  }
+  },
+  performance = {
+    cache = { enabled = true },
+    reset_packpath = true, -- reset the package path to improve startup time
+    rtp = {
+      reset = true, -- reset the runtime path to $VIMRUNTIME and your config directory
+      disabled_plugins = {
+        "gzip",
+        "man",
+        "nvim",
+        "rplugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
+  },
 })
 
-vim.keymap.set('n', '<S-l>', "<cmd>Lazy<CR>", {noremap = true, silent = true})
+local map = vim.keymap.set
+local nrs = { noremap = true, silent = true }
+map('n', '<S-l>', "<cmd>Lazy<CR>", nrs )
+map('n', '<leader>g', function() require("lazy.util").float_term({ "lazygit" }) end, nrs)
+map('n', '<leader>r', function() require("lazy.util").float_term({ "ranger" }) end, nrs)
+map('n', '<leader>m', function() require("lazy.util").float_term({ "ncmpcpp" }) end, nrs)

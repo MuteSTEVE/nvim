@@ -1,6 +1,19 @@
-require('core.options')
-require('core.keymaps')
-require('core.lazy')
-require('core.icons')
-require('core.statusline')
-require('core.autocmd')
+local config_modules = {
+  'core.options',
+  'core.keymaps',
+  'core.lazy',
+  'core.icons',
+  'core.statusline',
+  'core.autocmd',
+}
+
+local function source_module(module_name)
+  local success, error_msg = pcall(require, module_name)
+  if not success then
+    print('Error sourcing module ' .. module_name .. ': ' .. error_msg)
+  end
+end
+
+for _, module in ipairs(config_modules) do
+  source_module(module)
+end
