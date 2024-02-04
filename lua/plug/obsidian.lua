@@ -16,9 +16,9 @@ function PLUG.config()
     workspaces = {
       -- DON'T REMOVE THIS LINE OR ELSE CROSS-REFERENCE WON'T WORK
       -- Put other notes directory here
-    { name = "Learn_Japanese", path = "~/Documents/VAULT/Learn_Japanese/" },
-    { name = "Math", path = "~/Documents/VAULT/Math/" },
-    { name = "life", path = "~/Documents/VAULT/life/" },
+      { name = "Learn_Japanese", path = "~/Documents/VAULT/Learn_Japanese/" },
+      { name = "Math", path = "~/Documents/VAULT/Math/" },
+      { name = "life", path = "~/Documents/VAULT/life/" },
     },
     detect_cwd = false,
     notes_subdir = "notes",
