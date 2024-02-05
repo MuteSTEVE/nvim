@@ -51,3 +51,24 @@ map({'i', 'n'}, '<Left>', "<cmd>echo 'Use H VScode user!'<CR>", nrs)
 map({'i', 'n'}, '<Down>', "<cmd>echo 'Use J VScode user!'<CR>", nrs)
 map({'i', 'n'}, '<Up>', "<cmd>echo 'Use K VScode user!'<CR>", nrs)
 map({'i', 'n'}, '<Right>', "<cmd>echo 'Use L VScode user!'<CR>", nrs)
+
+-- Surround
+map('n', 's(', "viwc()<Esc>P", nrs)
+map('n', 's[', "viwc[]<Esc>P", nrs)
+map('n', 's{', "viwc{}<Esc>P", nrs)
+map('n', "s'", "viwc''<Esc>P", nrs)
+map('n', 's"', 'viwc""<Esc>P', nrs)
+map('n', 's<', "viwc<><Esc>P", nrs)
+
+-- it won't work for Three things:
+-- 1. if the cursor is on the surrounding
+-- 2. the first character to highlight
+-- 3. it has ' and "
+-- last character is fine
+map('n', 'sw(', "bhxelxviwc()<Esc>P", nrs)
+map('n', 'sw[', "bhxelxviwc[]<Esc>P", nrs)
+map('n', 'sw{', "bhxelxviwc{}<Esc>P", nrs)
+map('n', "sw'", "bhxelxviwc''<Esc>P", nrs)
+map('n', 'sw"', 'bhxelxviwc""<Esc>P', nrs)
+map('n', 'sw<', "bhxelxviwc<><Esc>P", nrs)
+map('n', '<leader>s', "bhxelxviwdpb", nrs)
