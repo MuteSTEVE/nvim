@@ -48,7 +48,7 @@ autocmd( "BufWritePre", {
   pattern = { "*.html", "*.php", "*.js"},
   command = "normal mMgg=G'M"
 })
--- Remove trailing space lua and python file
+-- Remove trailing space
 autocmd( "BufWritePre", {
   group = "FileFormat",
   pattern = { "*.py", "*.lua"},
@@ -61,5 +61,5 @@ augroup( "CustomBuffer", clear )
 autocmd( "TextYankPost", {
   group = "CustomBuffer",
   pattern = "*",
-  callback = function() vim.highlight.on_yank { timeout = 200 } end
+  callback = function() vim.highlight.on_yank { timeout = 100 } end
 })

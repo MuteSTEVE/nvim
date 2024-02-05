@@ -9,7 +9,11 @@ local nrs = { noremap = true, silent = true }
 -- save, quit and no highlight
 map('n', "<leader>w", "<cmd>w!<CR>", nr)
 map('n', "<leader>q", "<cmd>q!<CR>", nr)
-map('n', "<leader>h", "<cmd>noh<CR>", nrs)
+map('n', "<leader>h", "<cmd>noh | echo ' '<CR>", nrs)
+
+-- Center highlight
+map("n", "N", "Nzzzv", nrs)
+map("n", "n", "nzzzv", nrs)
 
 -- Make executable files
 map('x', "<leader>x", "<cmd>!chmod +x %<CR>", nrs)
@@ -17,6 +21,8 @@ map('x', "<leader>x", "<cmd>!chmod +x %<CR>", nrs)
 -- Some useful keybinds VSCode move line keybind
 map('n', 'K', "<cmd>move .-2<CR>==", nrs)
 map('n', 'J', "<cmd>move .+1<CR>==", nrs)
+map('v', 'J', ":m '>+1<CR>gv=gv", nrs)
+map('v', 'K', ":m '<-2<CR>gv=gv", nrs)
 
 -- buffer movement
 map('n', 'Z', "<cmd>bp<CR>", nrs)
@@ -39,3 +45,9 @@ map('v', '>', ">gv", nrs)
 -- moving the cursor in insert mode
 map('i', '<C-h>', "<Left>", nrs)
 map('i', '<C-l>', "<Right>", nrs)
+
+-- use HJKL to cure your VSCode cancer
+map({'i', 'n'}, '<Left>', "<cmd>echo 'Use H VScode user!'<CR>", nrs)
+map({'i', 'n'}, '<Down>', "<cmd>echo 'Use J VScode user!'<CR>", nrs)
+map({'i', 'n'}, '<Up>', "<cmd>echo 'Use K VScode user!'<CR>", nrs)
+map({'i', 'n'}, '<Right>', "<cmd>echo 'Use L VScode user!'<CR>", nrs)

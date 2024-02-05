@@ -65,17 +65,13 @@ function PLUG.config()
   -- Telescope LSP picker
   map('n', "<C-r>", builtin.lsp_references, opts)
   map('n', "<A-d>", builtin.diagnostics, opts)
-  map('n', "gd", builtin.lsp_definitions, opts)
-  map('n', "<C-w>", builtin.lsp_workspace_symbols, opts)
 
-  -- map('n', "gd", function() vim.lsp.buf.definition() end, opts)
+  map('n', "gd", function() vim.lsp.buf.definition() end, opts)
   map('n', "<C-h>", function() vim.lsp.buf.hover() end, opts)
-  -- map('n', "<C-w>", function() vim.lsp.buf.workspace_symbol() end, opts)
   map('n', "<A-f>", function() vim.diagnostic.open_float() end, opts)
   map('n', "[d", function() vim.diagnostic.goto_next() end, opts)
   map('n', "]d", function() vim.diagnostic.goto_prev() end, opts)
   map('n', "<C-a>", function() vim.lsp.buf.code_action() end, {})
-  -- map('n', "<C-r>", function() vim.lsp.buf.references() end, opts)
   map('n', "<S-r>", function() vim.lsp.buf.rename() end, opts)
   map('i', "<A-h>", function() vim.lsp.buf.signature_help() end, opts)
 end
