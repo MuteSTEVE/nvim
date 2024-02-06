@@ -16,13 +16,13 @@ map("n", "N", "Nzzzv", nrs)
 map("n", "n", "nzzzv", nrs)
 
 -- Make executable files
-map('x', "<leader>x", "<cmd>!chmod +x %<CR>", nrs)
+map('n', "<leader>x", "<cmd>!chmod +x %<CR>", nrs)
 
--- Some useful keybinds VSCode move line keybind
+-- Some useful keybinds VScode move line keybind
 map('n', 'K', "<cmd>move .-2<CR>==", nrs)
 map('n', 'J', "<cmd>move .+1<CR>==", nrs)
-map('v', 'J', ":m '>+1<CR>gv=gv", nrs)
-map('v', 'K', ":m '<-2<CR>gv=gv", nrs)
+map('v', 'J', "<cmd>m '>+1<CR>gv=gv", nrs)
+map('v', 'K', "<cmd>m '<-2<CR>gv=gv", nrs)
 
 -- buffer movement
 map('n', 'Z', "<cmd>bp<CR>", nrs)
@@ -46,29 +46,8 @@ map('v', '>', ">gv", nrs)
 map('i', '<C-h>', "<Left>", nrs)
 map('i', '<C-l>', "<Right>", nrs)
 
--- use HJKL to cure your VSCode cancer
+-- use HJKL to cure your VScode cancer
 map({'i', 'n'}, '<Left>', "<cmd>echo 'Use H VScode user!'<CR>", nrs)
 map({'i', 'n'}, '<Down>', "<cmd>echo 'Use J VScode user!'<CR>", nrs)
 map({'i', 'n'}, '<Up>', "<cmd>echo 'Use K VScode user!'<CR>", nrs)
 map({'i', 'n'}, '<Right>', "<cmd>echo 'Use L VScode user!'<CR>", nrs)
-
--- Surround
-map('n', 's(', "viwc()<Esc>P", nrs)
-map('n', 's[', "viwc[]<Esc>P", nrs)
-map('n', 's{', "viwc{}<Esc>P", nrs)
-map('n', "s'", "viwc''<Esc>P", nrs)
-map('n', 's"', 'viwc""<Esc>P', nrs)
-map('n', 's<', "viwc<><Esc>P", nrs)
-
--- it won't work for Three things:
--- 1. if the cursor is on the surrounding
--- 2. the first character to highlight
--- 3. it has ' and "
--- last character is fine
-map('n', 'sw(', "bhxelxviwc()<Esc>P", nrs)
-map('n', 'sw[', "bhxelxviwc[]<Esc>P", nrs)
-map('n', 'sw{', "bhxelxviwc{}<Esc>P", nrs)
-map('n', "sw'", "bhxelxviwc''<Esc>P", nrs)
-map('n', 'sw"', 'bhxelxviwc""<Esc>P', nrs)
-map('n', 'sw<', "bhxelxviwc<><Esc>P", nrs)
-map('n', '<leader>s', "bhxelxviwdpb", nrs)

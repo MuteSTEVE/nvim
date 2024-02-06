@@ -5,6 +5,7 @@ local config_modules = {
   'core.icons',
   'core.statusline',
   'core.autocmd',
+  'core.surround'
 }
 
 local function source_module(module_name)
