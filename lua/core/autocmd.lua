@@ -55,7 +55,7 @@ autocmd( "BufWritePre", {
   command = [[%s/\s\+$//e]]
 })
 
--- CustomBuffer
+-- Custom Buffer
 -- Highlight yank
 augroup( "CustomBuffer", clear )
 autocmd( "TextYankPost", {

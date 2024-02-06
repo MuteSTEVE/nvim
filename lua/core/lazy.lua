@@ -18,11 +18,7 @@ if not lazy_ok then
 end
 
 lazy.setup({
-  spec = {
-    { import = "plug" },
-    { import = "lsp" },
-    { import = "git" }
-  },
+  spec = { import = "plug" },
   performance = {
     cache = { enabled = true },
     reset_packpath = true, -- reset the package path to improve startup time
