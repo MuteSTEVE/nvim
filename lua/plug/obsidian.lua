@@ -19,6 +19,7 @@ function PLUG.config()
       { name = "Learn_Japanese", path = "~/Documents/VAULT/Learn_Japanese/" },
       { name = "Math", path = "~/Documents/VAULT/Math/" },
       { name = "life", path = "~/Documents/VAULT/life/" },
+      { name = "Password_manager", path = "~/Documents/VAULT/Password_manager/" },
     },
     detect_cwd = false,
     notes_subdir = "notes",
