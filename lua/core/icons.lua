@@ -1,7 +1,14 @@
 return {
   git = {
+    branch = "󰘬 ",
+    deleted = " ",
+    ignored = " ",
+    renamed = " ",
     signs = "▌",
-    branch = "󰘬 "
+    staged = "S",
+    unmerged = "",
+    unstaged = "M",
+    untracked = "U",
   },
 
   telescope = {
@@ -51,5 +58,15 @@ return {
     Unit = "",
     Value = "",
     Variable = "󰀫",
+  },
+
+  nvimtree = {
+    default = "󰉋",
+    empty = "",
+    empty_open = "",
+    GlyphDefault = "",
+    GlyphSymlink = "",
+    open = "",
+    symlink = ""
   },
 }

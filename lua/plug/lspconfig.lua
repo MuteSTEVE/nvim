@@ -67,7 +67,7 @@ function PLUG.config()
   map('n', "<A-d>", builtin.diagnostics, opts)
 
   map('n', "gd", function() vim.lsp.buf.definition() end, opts)
-  map('n', "<C-h>", function() vim.lsp.buf.hover() end, opts)
+  map('n', "<A-h>", function() vim.lsp.buf.hover() end, opts)
   map('n', "<A-f>", function() vim.diagnostic.open_float() end, opts)
   map('n', "[d", function() vim.diagnostic.goto_next() end, opts)
   map('n', "]d", function() vim.diagnostic.goto_prev() end, opts)
