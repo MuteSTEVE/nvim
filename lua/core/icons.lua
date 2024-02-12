@@ -1,9 +1,9 @@
 return {
   git = {
     branch = "󰘬 ",
-    deleted = " ",
+    deleted = "  ",
     ignored = " ",
-    renamed = " ",
+    renamed = "  ",
     signs = "▌",
     staged = "S",
     unmerged = "",

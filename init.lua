@@ -1,4 +1,4 @@
-local config_modules = {
+local config = {
   'core.options',
   'core.keymaps',
   'core.lazy',
@@ -14,6 +14,6 @@ local function source_module(module_name)
   end
 end
 
-for _, module in ipairs(config_modules) do
+for _, module in ipairs(config) do
   source_module(module)
 end
