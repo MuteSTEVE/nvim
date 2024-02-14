@@ -64,10 +64,8 @@ function PLUG.config()
       else
         fallback()
       end
-    end, {
-        "i",
-        "s",
-      }),
+    end,
+      { "i", "s" }),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -76,10 +74,8 @@ function PLUG.config()
       else
         fallback()
       end
-    end, {
-        "i",
-        "s",
-      }),
+    end,
+      { "i", "s",}),
   }
 
   local sources = {
@@ -125,22 +121,17 @@ function PLUG.config()
   -- Use buffer source for '/', '?', ':'
   cmp.setup.cmdline({ '/', '?', ':' }, {
     mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-      { name = 'buffer' },
-    },
+    sources = {{ name = 'buffer' }},
   })
 
   -- cmdline setup.
   cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({
-      { name = 'path' }
-    }, {
+    sources = cmp.config.sources({{ name = 'path' }},
+      {
         {
           name = 'cmdline',
-          option = {
-            ignore_cmds = { 'Man', '!' }
-          }
+          option = {ignore_cmds = { 'Man', '!' }}
         }
       })
   })

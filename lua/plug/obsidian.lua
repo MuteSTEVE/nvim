@@ -1,9 +1,7 @@
 local PLUG = {
   'epwalsh/obsidian.nvim',
   ft = "markdown",
-  dependencies = {
-    'nvim-lua/plenary.nvim',
-  }
+  dependencies = 'nvim-lua/plenary.nvim',
 }
 
 function PLUG.config()

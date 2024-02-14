@@ -23,9 +23,7 @@ function PLUG.config()
 
   local language_servers = lspconfig.util.available_servers()
   for _, ls in ipairs(language_servers) do
-    lspconfig[ls].setup({
-      capabilities = capabilities,
-    })
+    lspconfig[ls].setup({ capabilities = capabilities })
   end
 
   local langservers = {
@@ -36,9 +34,7 @@ function PLUG.config()
   }
 
   for _, server in ipairs(langservers) do
-    lspconfig[server].setup({
-      capabilities = capabilities,
-    })
+    lspconfig[server].setup({ capabilities = capabilities })
   end
 
   lspconfig.marksman.setup({})
@@ -46,9 +42,7 @@ function PLUG.config()
   lspconfig.lua_ls.setup({
     settings = {
       Lua = {
-        workspace = {
-          library = vim.api.nvim_get_runtime_file("", true),
-        },
+        workspace = { library = vim.api.nvim_get_runtime_file("", true) },
       },
     },
   })

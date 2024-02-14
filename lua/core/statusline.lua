@@ -31,7 +31,7 @@ local file_format = "%{&fileformat}"
 local lc = "%l" .. ":" .. "%c"
 local percentage = "%p%%"
 
-vim.cmd("highlight background guibg=#1C1C1C guifg=white")
+vim.cmd("highlight background guibg=guibg guifg=white")
 vim.cmd("set laststatus=3")
 vim.opt.statusline = background ..
 spc..spc..spc..

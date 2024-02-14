@@ -1,7 +1,7 @@
 local PLUG = {
   'nvim-treesitter/nvim-treesitter',
   event = { "BufReadPost", "BufNewFile" },
-  build = ":TSUpdate",
+  build = "<cmd>TSUpdate",
 }
 
 function PLUG.config()
@@ -20,9 +20,7 @@ function PLUG.config()
     },
     indent = {
       enable = true,
-      disable = {
-        "python", "css"
-      }
+      disable = { "python", "css" }
     }
   })
 end
