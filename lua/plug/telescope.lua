@@ -3,7 +3,6 @@ local PLUG = {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"kyazdani42/nvim-web-devicons",
-		"nvim-telescope/telescope-ui-select.nvim",
 	},
 	cmd = "Telescope",
 	keys = {
@@ -51,10 +50,6 @@ function PLUG.config()
 	if not actions_ok then
 		return
 	end
-	local themes_ok, themes = pcall(require, "telescope.themes")
-	if not themes_ok then
-		return
-	end
 	local icons_ok, icons = pcall(require, "core.icons")
 	if not icons_ok then
 		return
@@ -79,9 +74,7 @@ function PLUG.config()
 				},
 			},
 		},
-		extensions = { ["ui-select"] = { themes.get_dropdown({ previewer = false }) } },
 	})
-	telescope.load_extension("ui-select")
 end
 
 return PLUG
