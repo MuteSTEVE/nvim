@@ -1,5 +1,6 @@
 local PLUG = {
   'NvChad/nvim-colorizer.lua',
+  ft = { "css", "js", "html" },
   event = { "BufReadPost", "BufNewFile" }
 }
 

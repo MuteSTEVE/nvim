@@ -14,12 +14,10 @@ function PLUG.config()
       timeout_ms = 500,
       lsp_fallback = true,
     },
-
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = "CustomBuffer",
-      pattern = "*",
-      callback = function(args) require("conform").format({ bufnr = args.buf }) end,
-    })
+    formatters_by_ft = {
+      lua = { "stylua" },
+      python = { "isort", "black" },
+    },
   })
 end
 
