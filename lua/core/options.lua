@@ -6,6 +6,7 @@ local options = {
   cursorline = true,
   expandtab = true,
   fileencoding = "utf-8",
+  filetype = on,
   guifont = "monospace:h17",
   hlsearch = true,
   ignorecase = true,
@@ -27,6 +28,7 @@ local options = {
   splitbelow = true,
   splitright = true,
   swapfile = false,
+  syntax = on,
   tabstop = 2,
   termguicolors = true,
   timeoutlen = 300,
@@ -45,12 +47,6 @@ vim.opt.shortmess:append "c"
 vim.opt.iskeyword:append "-"
 vim.opt.formatoptions:remove({ "c", "r", "o" })
 vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
-
-vim.o.guicursor = table.concat({
-  "n-v-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-  "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-  "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100"
-}, ",")
 
 vim.cmd("colorscheme habamax")
 

@@ -63,3 +63,16 @@ autocmd( "TextYankPost", {
   pattern = "*",
   callback = function() vim.highlight.on_yank { timeout = 100 } end
 })
+
+-- Autopairs
+augroup( "Autopairs", clear )
+autocmd( "InsertEnter", {
+  group = "Autopairs",
+  pattern = "*",
+  command = [[inoremap ( ()<Left>| inoremap ' ''<Left>| inoremap " ""<Left>| inoremap [ []<Left>| inoremap { {}<Left>]]
+})
+autocmd( "InsertLeave", {
+  group = "Autopairs",
+  pattern = "*",
+  command = [[inoremap ( (| inoremap ' '| inoremap " "| inoremap [ [| inoremap { {]]
+})
