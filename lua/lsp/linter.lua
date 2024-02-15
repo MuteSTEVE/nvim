@@ -1,9 +1,9 @@
-local PLUG = {
+local LINT = {
 	"mfussenegger/nvim-lint",
 	event = { "BufReadPost", "BufNewFile" },
 }
 
-function PLUG.config()
+function LINT.config()
 	local lint_ok, lint = pcall(require, "lint")
 	if not lint_ok then
 		return
@@ -23,4 +23,4 @@ function PLUG.config()
 	})
 end
 
-return PLUG
+return LINT

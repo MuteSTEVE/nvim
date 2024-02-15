@@ -1,4 +1,4 @@
-local PLUG = {
+local CMP = {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
@@ -13,7 +13,7 @@ local PLUG = {
 	},
 }
 
-function PLUG.config()
+function CMP.config()
 	local cmp_ok, cmp = pcall(require, "cmp")
 	if not cmp_ok then
 		return
@@ -134,4 +134,4 @@ function PLUG.config()
 	})
 end
 
-return PLUG
+return CMP

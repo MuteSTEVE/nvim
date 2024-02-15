@@ -1,9 +1,9 @@
-local PLUG = {
+local CONFORM = {
 	"stevearc/conform.nvim",
 	event = { "BufReadPost", "BufNewFile" },
 }
 
-function PLUG.config()
+function CONFORM.config()
 	local conform_ok, conform = pcall(require, "conform")
 	if not conform_ok then
 		return
@@ -28,4 +28,4 @@ function PLUG.config()
 	})
 end
 
-return PLUG
+return CONFORM

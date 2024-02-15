@@ -1,4 +1,4 @@
-local PLUG = {
+local NVIMTREE = {
 	"nvim-tree/nvim-tree.lua",
 	dependencies = "kyazdani42/nvim-web-devicons",
 	lazy = true,
@@ -6,7 +6,7 @@ local PLUG = {
 	keys = { "<leader>n", "<cmd>NvimTreeFindFileToggle<cr>" },
 }
 
-function PLUG.config()
+function NVIMTREE.config()
 	local nvimtree_ok, nvim_tree = pcall(require, "nvim-tree")
 	if not nvimtree_ok then
 		return
@@ -66,4 +66,4 @@ function PLUG.config()
 	vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeFindFileToggle<cr>", { silent = true })
 end
 
-return PLUG
+return NVIMTREE

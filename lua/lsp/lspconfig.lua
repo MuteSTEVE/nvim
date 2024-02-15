@@ -1,9 +1,9 @@
-local PLUG = {
+local LSPCONFIG = {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPost", "BufNewFile" },
 }
 
-function PLUG.config()
+function LSPCONFIG.config()
 	local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
 	if not lspconfig_ok then
 		return
@@ -80,4 +80,4 @@ function PLUG.config()
 	end, {})
 end
 
-return PLUG
+return LSPCONFIG

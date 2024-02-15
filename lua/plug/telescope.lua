@@ -1,4 +1,4 @@
-local PLUG = {
+local TELESCOPE = {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -41,7 +41,7 @@ local PLUG = {
 	},
 }
 
-function PLUG.config()
+function TELESCOPE.config()
 	local telescope_ok, telescope = pcall(require, "telescope")
 	if not telescope_ok then
 		return
@@ -78,4 +78,4 @@ function PLUG.config()
 	})
 end
 
-return PLUG
+return TELESCOPE

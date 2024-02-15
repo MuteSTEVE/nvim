@@ -4,7 +4,7 @@ return {
 		deleted = " ",
 		ignored = " ",
 		renamed = "  ",
-		staged = "S",
+		staged = " S",
 		unmerged = "",
 		unstaged = " M",
 		untracked = " U",
