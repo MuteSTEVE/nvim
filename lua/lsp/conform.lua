@@ -18,7 +18,7 @@ function CONFORM.config()
 			lua = { "stylua" },
 			python = { "isort", "black" },
 		},
-		vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePre", "InsertLeave" }, {
+		vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePre" }, {
 			group = "CustomBuffer",
 			pattern = "*",
 			callback = function(args)
