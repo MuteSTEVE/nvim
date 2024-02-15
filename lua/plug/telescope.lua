@@ -68,6 +68,7 @@ function PLUG.config()
 					["<leader>F"] = actions.close,
 					["<leader>H"] = actions.close,
 					["<leader>b"] = actions.close,
+					["<leader>q"] = actions.close,
 					["<C-b>"] = actions.close,
 					["<C-a>"] = actions.close,
 					["<Esc>"] = actions.close,
