@@ -18,7 +18,7 @@ function PLUG.config()
 			lua = { "stylua" },
 			python = { "isort", "black" },
 		},
-		vim.api.nvim_create_autocmd({ "BufWritePre", "BufNewFile", "BufReadPost" }, {
+		vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePre", "InsertLeave" }, {
 			group = "CustomBuffer",
 			pattern = "*",
 			callback = function(args)
