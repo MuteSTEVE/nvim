@@ -5,74 +5,76 @@ local clear = { clear = true }
 
 -- TerminalMode
 -- Disable statusline in terminal mode
-augroup( "TerminalMode", clear )
-autocmd( "TermEnter", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set laststatus=0"
+augroup("TerminalMode", clear)
+autocmd("TermEnter", {
+	group = "TerminalMode",
+	pattern = "*",
+	command = "set laststatus=0",
 })
-autocmd( "TermLeave", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set laststatus=3"
+autocmd("TermLeave", {
+	group = "TerminalMode",
+	pattern = "*",
+	command = "set laststatus=3",
 })
 -- Remove annoying message '[Process exitt 05]'
-autocmd( "TermClose", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "execute 'bdelete!' . expand('<abuf>')"
+autocmd("TermClose", {
+	group = "TerminalMode",
+	pattern = "*",
+	command = "execute 'bdelete!' . expand('<abuf>')",
 })
 -- Always start terminal in insert mode
-autocmd( "TermOpen", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "startinsert | set winfixheight"
+autocmd("TermOpen", {
+	group = "TerminalMode",
+	pattern = "*",
+	command = "startinsert | set winfixheight",
 })
 -- Remove line and relative number
-autocmd( "TermOpen", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set nonumber | set norelativenumber"
+autocmd("TermOpen", {
+	group = "TerminalMode",
+	pattern = "*",
+	command = "set nonumber | set norelativenumber",
 })
-autocmd( "TermClose", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set number | set relativenumber"
+autocmd("TermClose", {
+	group = "TerminalMode",
+	pattern = "*",
+	command = "set number | set relativenumber",
 })
 
 -- FileFormat
 -- Auto-indent html, php and javascript files
-augroup( "FileFormat", clear )
-autocmd( "BufWritePre", {
-  group = "FileFormat",
-  pattern = { "*.html", "*.php", "*.js"},
-  command = "normal mMgg=G'M"
+augroup("FileFormat", clear)
+autocmd("BufWritePre", {
+	group = "FileFormat",
+	pattern = { "*.html", "*.php", "*.js" },
+	command = "normal mMgg=G'M",
 })
 -- Remove trailing space
-autocmd( "BufWritePre", {
-  group = "FileFormat",
-  pattern = { "*.py", "*.lua"},
-  command = [[%s/\s\+$//e]]
+autocmd("BufWritePre", {
+	group = "FileFormat",
+	pattern = { "*.py", "*.lua" },
+	command = [[%s/\s\+$//e]],
 })
 
 -- Custom Buffer
 -- Highlight yank
-augroup( "CustomBuffer", clear )
-autocmd( "TextYankPost", {
-  group = "CustomBuffer",
-  pattern = "*",
-  callback = function() vim.highlight.on_yank { timeout = 100 } end
+augroup("CustomBuffer", clear)
+autocmd("TextYankPost", {
+	group = "CustomBuffer",
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ timeout = 100 })
+	end,
 })
 
 -- Autopairs
-augroup( "Autopairs", clear )
-autocmd( "InsertEnter", {
-  group = "Autopairs",
-  pattern = "*",
-  command = [[inoremap ( ()<Left>| inoremap ' ''<Left>| inoremap " ""<Left>| inoremap [ []<Left>| inoremap { {}<Left>]]
+augroup("Autopairs", clear)
+autocmd("InsertEnter", {
+	group = "Autopairs",
+	pattern = "*",
+	command = [[inoremap ( ()<Left>| inoremap ' ''<Left>| inoremap " ""<Left>| inoremap [ []<Left>| inoremap { {}<Left>]],
 })
-autocmd( "InsertLeave", {
-  group = "Autopairs",
-  pattern = "*",
-  command = [[inoremap ( (| inoremap ' '| inoremap " "| inoremap [ [| inoremap { {]]
+autocmd("InsertLeave", {
+	group = "Autopairs",
+	pattern = "*",
+	command = [[inoremap ( (| inoremap ' '| inoremap " "| inoremap [ [| inoremap { {]],
 })
