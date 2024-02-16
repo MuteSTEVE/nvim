@@ -1,5 +1,7 @@
 local NEOTREE = {
 	"nvim-neo-tree/neo-tree.nvim",
+	cmd = "Neotree",
+	keys = { "<leader>n", "<cmd>Neotree left toggle<CR>" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
