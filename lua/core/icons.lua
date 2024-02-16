@@ -1,25 +1,15 @@
 return {
 	git = {
+		added = "",
 		branch = "󰘬 ",
-		deleted = " ",
-		ignored = " ",
-		renamed = "  ",
-		staged = " S",
-		unmerged = "",
-		unstaged = " M",
-		untracked = " U",
-	},
-
-	telescope = {
-		find = "   ",
-		select = " ",
-	},
-
-	signs = {
-		Error = "󰅙 ",
-		Hint = "󰌵",
-		Info = "",
-		Warn = " ",
+		conflict = "",
+		deleted = "",
+		ignored = "",
+		modified = "",
+		renamed = " ",
+		staged = "S",
+		unstaged = "U",
+		untracked = "",
 	},
 
 	kind_icons = {
@@ -59,13 +49,24 @@ return {
 		Variable = "󰀫",
 	},
 
-	nvimtree = {
-		default = "󰉋",
-		empty = "",
-		empty_open = " ",
-		GlyphDefault = "",
-		GlyphSymlink = "",
-		open = "",
-		symlink = "",
+	neotree = {
+		default = "",
+		folder_closed = "",
+		folder_empty = "󰜌",
+		folder_open = "",
+		expander_collapsed = "",
+		expander_expanded = "",
+	},
+
+	signs = {
+		Error = "󰅙 ",
+		Hint = "󰌵",
+		Info = "",
+		Warn = " ",
+	},
+
+	telescope = {
+		find = "   ",
+		select = " ",
 	},
 }
