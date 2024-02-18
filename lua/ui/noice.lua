@@ -1,6 +1,6 @@
 local NOICE = {
 	"folke/noice.nvim",
-	event = "VeryLazy",
+	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"rcarriga/nvim-notify",

@@ -103,6 +103,12 @@ function PLUG.config()
 	})
 
 	ins_left({
+		"filename",
+		cond = conditions.buffer_not_empty,
+		color = { fg = colors.white, gui = "bold" },
+	})
+
+	ins_left({
 		"diagnostics",
 		sources = { "nvim_diagnostic" },
 		sections = { "error", "warn" },
@@ -117,7 +123,7 @@ function PLUG.config()
 	ins_left({
 		"diff",
 		-- Is it me or the symbol for modified us really weird
-		symbols = { added = GIT.added, modified = GIT.modified, removed = GIT.removed },
+		symbols = { added = IL.added, modified = IL.modified, removed = IL.removed },
 		always_visible = true,
 		diff_color = {
 			added = { fg = colors.white, gui = "bold" },
@@ -159,7 +165,8 @@ function PLUG.config()
 
 	ins_right({
 		"fileformat",
-		icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
+		fmt = string.upper,
+		icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
 		color = { fg = colors.white, gui = "bold" },
 	})
 
