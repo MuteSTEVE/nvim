@@ -1,16 +1,6 @@
 return {
 	git = {
-		added = " ",
 		branch = "󰘬 ",
-		conflict = " ",
-		deleted = " ",
-		ignored = "",
-		modified = " ",
-		renamed = "  ",
-		signs = "▌",
-		staged = "S",
-		unstaged = "U",
-		untracked = "",
 	},
 
 	kind_icons = {
@@ -48,39 +38,6 @@ return {
 		Unit = "",
 		Value = "",
 		Variable = "󰀫",
-	},
-
-	lualine = {
-		__1 = "▁▁",
-		__2 = "▂▂",
-		__3 = "▃▃",
-		__4 = "▄▄",
-		__5 = "▅▅",
-		__6 = "▆▆",
-		__7 = "▇▇",
-		__8 = "██",
-		added = " ",
-		modified = "󰙦 ",
-		removed = " ",
-		gear = " ",
-		vert = "▊",
-	},
-
-	neotree = {
-		default = "",
-		folder_closed = "",
-		folder_empty = "󰜌",
-		folder_open = "",
-		expander_collapsed = "",
-		expander_expanded = "",
-	},
-
-	noice = {
-		cmdline = "",
-		filter = "",
-		help = "",
-		lua = "",
-		search = " ",
 	},
 
 	signs = {

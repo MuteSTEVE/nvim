@@ -106,10 +106,6 @@ function CMP.config()
 				luasnip.lsp_expand(args.body) -- For `luasnip` users.
 			end,
 		},
-		window = {
-			completion = cmp.config.window.bordered(),
-			documentation = cmp.config.window.bordered(),
-		},
 		mapping = mappings,
 		formatting = formattings,
 		sources = sources,

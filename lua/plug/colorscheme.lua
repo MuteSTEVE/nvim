@@ -9,7 +9,13 @@ function ROSE.config()
 	if not rose_pine_ok then
 		return
 	end
-	rose_pine.setup({})
+	rose_pine.setup({
+		styles = {
+			bold = true,
+			italic = false,
+			transparency = true,
+		},
+	})
 	vim.cmd("colorscheme rose-pine")
 end
 
