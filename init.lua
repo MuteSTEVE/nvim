@@ -3,7 +3,6 @@ local config = {
 	"core.keymaps",
 	"core.lazy",
 	"core.icons",
-	"core.statusline",
 	"core.autocmd",
 }
 

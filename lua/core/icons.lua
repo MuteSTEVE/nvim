@@ -1,12 +1,12 @@
 return {
 	git = {
-		added = "",
-		branch = "󰘬 ",
-		conflict = "",
-		deleted = "",
+		added = " ",
+		branch = "󰘬",
+		conflict = " ",
+		deleted = " ",
 		ignored = "",
-		modified = "",
-		renamed = " ",
+		modified = " ",
+		renamed = "  ",
 		staged = "S",
 		unstaged = "U",
 		untracked = "",
@@ -47,6 +47,19 @@ return {
 		Unit = "",
 		Value = "",
 		Variable = "󰀫",
+	},
+
+	lualine = {
+		__1 = "▁▁",
+		__2 = "▂▂",
+		__3 = "▃▃",
+		__4 = "▄▄",
+		__5 = "▅▅",
+		__6 = "▆▆",
+		__7 = "▇▇",
+		__8 = "██",
+		gear = " ",
+		vert = "▊",
 	},
 
 	neotree = {
