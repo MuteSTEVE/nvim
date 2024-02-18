@@ -9,7 +9,7 @@ local nrs = { noremap = true, silent = true }
 -- save, quit and no highlight
 map("n", "<leader>w", "<cmd>w!<CR>", nr)
 map("n", "<leader>q", "<cmd>q!<CR>", nr)
-map("n", "<leader>h", "<cmd>noh | echo ' '<CR>", nrs)
+map("n", "<leader>h", [[<cmd>noh<CR> | <cmd>NoiceDismiss<CR> | <cmd>echo ' '<CR>]], nrs)
 
 -- Center highlight
 map("n", "N", "Nzzzv", nrs)

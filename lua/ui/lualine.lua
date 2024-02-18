@@ -18,13 +18,22 @@ function PLUG.config()
 	end
 	local IL = icons.lualine
 	local GIT = icons.git
+	local IS = icons.signs
 
   -- Color table for highlights
   -- stylua: ignore
   local colors = {
-    bg       = '#007ACC',
-    fg       = '#bbc2cf',
+    bg       = '#1E2030',
+    fg       = '#82AAFF',
     white    = '#FFFFFF',
+    dusk     = '#82AAFF',
+    duskblue = '#6E759D',
+    red      = '#DB4B4B',
+    yellow   = '#E0AF68',
+    teal     = '#1B9A85',
+    green    = '#98be65',
+    orange   = '#FF8800',
+    magenta  = '#c678dd',
   }
 
 	local conditions = {
@@ -91,20 +100,44 @@ function PLUG.config()
 		function()
 			return IL.vert
 		end,
-		color = { fg = colors.bg },
+		color = { fg = colors.fg },
 		padding = { left = 1 },
 	})
 
 	ins_left({
 		"branch",
 		icon = GIT.branch,
-		color = { fg = colors.white, gui = "bold" },
+		color = { fg = colors.dusk, gui = "bold" },
 	})
 
 	ins_left({
 		"filename",
 		cond = conditions.buffer_not_empty,
 		color = { fg = colors.white, gui = "bold" },
+	})
+
+	ins_left({
+		"diagnostics",
+		sources = { "nvim_diagnostic" },
+		sections = { "error", "warn" },
+		symbols = { error = IS.Error, warn = IS.Warn },
+		always_visible = true,
+		diagnostics_color = {
+			error = { fg = colors.red, gui = "bold" },
+			warn = { fg = colors.yellow, gui = "bold" },
+		},
+	})
+
+	ins_left({
+		"diff",
+		-- Is it me or the symbol for modified us really weird
+		always_visible = true,
+		diff_color = {
+			added = { fg = colors.green, gui = "bold" },
+			modified = { fg = colors.orange, gui = "bold" },
+			removed = { fg = colors.red, gui = "bold" },
+		},
+		cond = conditions.hide_in_width,
 	})
 
 	-- Insert mid section. You can make any number of sections in neovim :)
@@ -116,7 +149,7 @@ function PLUG.config()
 	})
 
 	-- Add components to right sections
-	ins_right({
+	ins_left({
 		-- Lsp server name .
 		function()
 			local msg = "No Active Lsp"
@@ -134,43 +167,56 @@ function PLUG.config()
 			return msg
 		end,
 		icon = IL.gear,
-		color = { fg = colors.white, gui = "bold" },
+		color = { fg = colors.teal, gui = "bold" },
+	})
+
+	ins_right({
+		-- filesize component
+		"filetype",
+		icon_only = true,
+		cond = conditions.buffer_not_empty,
+	})
+
+	ins_right({
+		-- filesize component
+		"filesize",
+		cond = conditions.buffer_not_empty,
 	})
 
 	ins_right({
 		"fileformat",
 		fmt = string.upper,
 		icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-		color = { fg = colors.white, gui = "bold" },
+		color = { fg = colors.magenta, gui = "bold" },
 	})
 
 	ins_right({
 		"encoding", -- option component same as &encoding in viml
 		fmt = string.upper,
 		cond = conditions.hide_in_width,
-		color = { fg = colors.white, gui = "bold" },
+		color = { fg = colors.magenta, gui = "bold" },
 	})
 
 	ins_right({
 		"location",
-		color = { fg = colors.white, gui = "bold" },
+		color = { fg = colors.green, gui = "bold" },
 	})
 
 	ins_right({
 		"progress",
-		color = { fg = colors.white, gui = "bold" },
+		color = { fg = colors.green, gui = "bold" },
 	})
 
 	ins_right({
 		progress,
-		color = { fg = colors.white, gui = "bold" },
+		color = { fg = colors.green, gui = "bold" },
 	})
 
 	ins_right({
 		function()
 			return IL.vert
 		end,
-		color = { fg = colors.bg },
+		color = { fg = colors.fg },
 		padding = { left = 1 },
 	})
 
