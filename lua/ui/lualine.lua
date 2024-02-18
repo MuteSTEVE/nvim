@@ -18,7 +18,6 @@ function PLUG.config()
 	end
 	local IL = icons.lualine
 	local GIT = icons.git
-	local IS = icons.signs
 
   -- Color table for highlights
   -- stylua: ignore
@@ -106,31 +105,6 @@ function PLUG.config()
 		"filename",
 		cond = conditions.buffer_not_empty,
 		color = { fg = colors.white, gui = "bold" },
-	})
-
-	ins_left({
-		"diagnostics",
-		sources = { "nvim_diagnostic" },
-		sections = { "error", "warn" },
-		symbols = { error = IS.Error, warn = IS.Warn },
-		always_visible = true,
-		diagnostics_color = {
-			error = { fg = colors.white, gui = "bold" },
-			warn = { fg = colors.white, gui = "bold" },
-		},
-	})
-
-	ins_left({
-		"diff",
-		-- Is it me or the symbol for modified us really weird
-		symbols = { added = IL.added, modified = IL.modified, removed = IL.removed },
-		always_visible = true,
-		diff_color = {
-			added = { fg = colors.white, gui = "bold" },
-			modified = { fg = colors.white, gui = "bold" },
-			removed = { fg = colors.white, gui = "bold" },
-		},
-		cond = conditions.hide_in_width,
 	})
 
 	-- Insert mid section. You can make any number of sections in neovim :)

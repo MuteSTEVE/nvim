@@ -51,5 +51,3 @@ vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
 if not vim.fn.exists("guin running") then
 	vim.o.t_Co = 256
 end
-
-vim.cmd([[autocmd VimEnter * echo "Hello"]])
