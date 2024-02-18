@@ -1,7 +1,7 @@
 return {
 	git = {
 		added = " ",
-		branch = "󰘬",
+		branch = "󰘬 ",
 		conflict = " ",
 		deleted = " ",
 		ignored = "",
