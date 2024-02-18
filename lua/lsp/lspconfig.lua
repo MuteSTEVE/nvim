@@ -27,7 +27,6 @@ function LSPCONFIG.config()
 		"pyright",
 		"vimls",
 		"lua_ls",
-		"marksman",
 	}
 
 	for _, server in ipairs(langservers) do
