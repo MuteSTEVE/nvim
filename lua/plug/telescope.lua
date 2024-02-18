@@ -76,6 +76,7 @@ function TELESCOPE.config()
 			},
 		},
 	})
+	telescope.load_extension("noice")
 end
 
 return TELESCOPE

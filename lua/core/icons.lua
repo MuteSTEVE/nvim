@@ -58,6 +58,14 @@ return {
 		expander_expanded = "",
 	},
 
+	noice = {
+		cmdline = "",
+		filter = "",
+		help = "",
+		lua = "",
+		search = " ",
+	},
+
 	signs = {
 		Error = "󰅙 ",
 		Hint = "󰌵",
