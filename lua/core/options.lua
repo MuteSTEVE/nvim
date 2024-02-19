@@ -3,7 +3,6 @@ local options = {
 	cmdheight = 1,
 	completeopt = { "menuone", "noselect" },
 	conceallevel = 1,
-	cursorline = true,
 	expandtab = true,
 	fileencoding = "utf-8",
 	filetype = on,

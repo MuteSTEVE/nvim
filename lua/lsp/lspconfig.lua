@@ -51,7 +51,7 @@ function LSPCONFIG.config()
 	end
 
 	local map = vim.keymap.set
-	map("n", "<C-r>", telescope.lsp_references, {})
+	map("n", "<A-r>", telescope.lsp_references, {})
 	map("n", "<A-d>", telescope.diagnostics, {})
 	map("n", "gd", function()
 		vim.lsp.buf.definition()
