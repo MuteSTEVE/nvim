@@ -19,9 +19,7 @@ function PLUG.config()
 				end,
 				overrides = {
 					notes_subdir = vim.NIL, -- have to use 'vim.NIL' instead of 'nil'
-					completion = {
-						new_notes_location = "current_dir",
-					},
+					new_notes_location = "current_dir",
 					templates = {
 						subdir = vim.NIL,
 					},
@@ -36,14 +34,6 @@ function PLUG.config()
 			date_format = "%Y-%m-%d",
 			alias_format = "%B %-d, %Y",
 			template = nil,
-		},
-		completion = {
-			nvim_cmp = true,
-			min_chars = 2,
-			new_notes_location = "current_dir",
-			prepend_note_id = true,
-			prepend_note_path = false,
-			use_path_only = false,
 		},
 		mappings = {
 			["gf"] = {

@@ -36,8 +36,8 @@ vim.cmd("set laststatus=3")
 vim.opt.statusline = background
 	.. spc
 	.. spc
-	.. spc
 	.. branch
+	.. spc
 	.. file_name
 	.. spc
 	.. modified
