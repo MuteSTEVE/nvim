@@ -1,19 +1,19 @@
 local icons_ok, icons = pcall(require, "core.icons")
 if not icons_ok then
-	return
+  return
 end
 local GIT = icons.git
 
 local function shell(command)
-	local handle = io.popen(command)
-	local result = handle:read("*a")
-	local icon = GIT.branch
-	handle:close()
-	if string.len(result) > 0 then
-		return icon .. result .. " " .. " "
-	else
-		return ""
-	end
+  local handle = io.popen(command)
+  local result = handle:read("*a")
+  local icon = GIT.branch
+  handle:close()
+  if string.len(result) > 0 then
+    return icon .. result .. " " .. " "
+  else
+    return ""
+  end
 end
 
 local background = "%#background#"
@@ -34,28 +34,27 @@ local percentage = "%p%%"
 vim.cmd("highlight background guibg=guibg guifg=white")
 vim.cmd("set laststatus=3")
 vim.opt.statusline = background
-	.. spc
-	.. spc
-	.. branch
-	.. spc
-	.. file_name
-	.. spc
-	.. modified
-	.. spc
-	.. read_only
-	.. align_right
-	.. file_type
-	.. spc
-	.. spc
-	.. file_encoding
-	.. spc
-	.. spc
-	.. file_format
-	.. spc
-	.. spc
-	.. lc
-	.. spc
-	.. percentage
-	.. spc
-	.. spc
-	.. spc
+    .. spc
+    .. spc
+    .. branch
+    .. spc
+    .. file_name
+    .. spc
+    .. modified
+    .. spc
+    .. read_only
+    .. align_right
+    .. file_type
+    .. spc
+    .. spc
+    .. file_encoding
+    .. spc
+    .. spc
+    .. file_format
+    .. spc
+    .. spc
+    .. lc
+    .. spc
+    .. percentage
+    .. spc
+    .. spc
