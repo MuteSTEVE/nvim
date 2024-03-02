@@ -19,7 +19,7 @@ end
 
 lazy.setup({
 	spec = {
-		{ import = "etc" },
+		{ import = "plug" },
 		{ import = "lsp" },
 		{ import = "md" },
 	},
