@@ -19,42 +19,34 @@ end
 local background = "%#background#"
 local spc = " "
 local align_right = "%="
+local slash = [[/]]
 
 local branch = shell("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 local file_name = "%f"
 local modified = "%m"
 local read_only = "%r"
 
-local file_type = "%{&filetype != '' ? &filetype .. '' : ''}"
-local file_encoding = "%{&fileencoding}"
-local file_format = "%{&fileformat}"
-local lc = "%l" .. ":" .. "%c"
+local linepost = "%c" .. ":" .. "%l"
+local total_lines = "%L"
 local percentage = "%p%%"
 
 vim.cmd("highlight background guibg=guibg guifg=white")
-vim.cmd("set laststatus=3")
+vim.opt.laststatus = 3
 vim.opt.statusline = background
     .. spc
     .. spc
     .. branch
-    .. spc
     .. file_name
     .. spc
     .. modified
     .. spc
     .. read_only
     .. align_right
-    .. file_type
     .. spc
     .. spc
-    .. file_encoding
-    .. spc
-    .. spc
-    .. file_format
-    .. spc
-    .. spc
-    .. lc
+    .. linepost
+    .. slash
+    .. total_lines
     .. spc
     .. percentage
-    .. spc
     .. spc
