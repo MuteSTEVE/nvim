@@ -15,14 +15,13 @@ function LINT.config()
   }
   vim.api.nvim_create_augroup("lint", { clear = true })
   vim.api.nvim_create_autocmd(
-    { "CursorMoved", "CursorMovedI", "CursorHold", "CursorHoldI", "BufReadPost", "BufWritePre", "InsertEnter",
-      "InsertLeave" }, {
-      group = "lint",
-      pattern = "*",
-      callback = function()
-        lint.try_lint()
-      end,
-    })
+  { "CursorMoved", "CursorHold", "BufReadPost", "BufWritePre", "InsertEnter", "InsertLeave" }, {
+    group = "lint",
+    pattern = "*",
+    callback = function()
+      lint.try_lint()
+    end,
+  })
 end
 
 return LINT
