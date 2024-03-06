@@ -34,7 +34,7 @@ function ZEN.config()
       tmux = { enabled = true },
       alacritty = {
         enabled = true,
-        font = "15",
+        font = "12",
       },
     },
 
