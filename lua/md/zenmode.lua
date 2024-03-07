@@ -1,7 +1,7 @@
 local ZEN = {
   "folke/zen-mode.nvim",
   dependencies = "folke/twilight.nvim",
-  keys = { "<leader>z", "<cmd>ZenMode<CR>" },
+  keys = { { "<leader>z", "<cmd>ZenMode<CR>" } },
   ft = "markdown",
   cmd = "ZenMode",
 }
