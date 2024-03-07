@@ -11,11 +11,10 @@ function LINT.config()
 
   lint.linters_by_ft = {
     lua = { "luacheck" },
-    python = { "mypy" },
+    python = { "mypy", "flake8", "pylint" },
   }
   vim.api.nvim_create_augroup("lint", { clear = true })
-  vim.api.nvim_create_autocmd(
-  { "CursorMoved", "CursorHold", "BufReadPost", "BufWritePre", "InsertEnter", "InsertLeave" }, {
+  vim.api.nvim_create_autocmd({ "BufReadPost", "BufWritePre", "InsertEnter", "InsertLeave" }, {
     group = "lint",
     pattern = "*",
     callback = function()
