@@ -51,3 +51,12 @@ map({ "i", "n" }, "<Left>", "<cmd>echo 'Use H VScode user!'<CR>", nrs)
 map({ "i", "n" }, "<Down>", "<cmd>echo 'Use J VScode user!'<CR>", nrs)
 map({ "i", "n" }, "<Up>", "<cmd>echo 'Use K VScode user!'<CR>", nrs)
 map({ "i", "n" }, "<Right>", "<cmd>echo 'Use L VScode user!'<CR>", nrs)
+
+-- Automatically close brackets, parethesis, and quotes
+map("i", "'", "''<left>")
+map("i", "(", "()<left>")
+map("i", ")", "()<Left><leader><leader><Left>")
+map("i", "[", "[]<left>")
+map("i", "]", "[]<Left><leader><leader><Left>")
+map("i", "{", "{}<left>")
+map("i", "}", "{}<Left><leader><leader><Left>")
