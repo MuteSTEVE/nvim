@@ -1,6 +1,6 @@
 local LINT = {
   "mfussenegger/nvim-lint",
-  ft = { "lua", "python", "css", "javascript", "html" }
+  event = { "BufReadPost", "BufNewFile" },
 }
 
 function LINT.config()
@@ -14,9 +14,9 @@ function LINT.config()
     python = { "mypy", "flake8", "pylint" },
   }
   vim.api.nvim_create_augroup("lint", { clear = true })
-  vim.api.nvim_create_autocmd({ "BufWritePre", "InsertEnter", "InsertLeave" }, {
+  vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     group = "lint",
-    pattern = { "lua", "python", "css", "javascript", "html" },
+    pattern = { "*.lua", "*.py", "*.css", "*.js", "*.html" },
     callback = function()
       lint.try_lint()
     end,

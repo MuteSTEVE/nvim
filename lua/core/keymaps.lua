@@ -8,7 +8,8 @@ local nrs = { noremap = true, silent = true }
 
 -- save, quit and no highlight
 map("n", "<leader>w", "<cmd>w!<CR>", nr)
-map("n", "<leader>q", "<cmd>q!<CR>", nr)
+map("n", "<leader>q", "<cmd>wq!<CR>", nr)
+map("n", "<A-q>", "<cmd>q!<CR>", nr)
 map("n", "<leader>h", "<cmd>noh | echo ' '<CR>", nrs)
 
 -- Center highlight
