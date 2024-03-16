@@ -34,22 +34,8 @@ local percentage = "%p%%"
 -- vim.cmd("highlight background guibg=white guifg=black") -- If you want original like vim
 vim.cmd("highlight background guibg=guibg guifg=white")
 vim.opt.laststatus = 3
-vim.opt.statusline = background
-	.. spc
-	.. spc
-	.. branch
-	.. file_name
-	.. spc
-	.. modified
-	.. spc
-	.. read_only
-	.. spc
-	.. spc
-	.. align_right
-	.. linepost
-	.. slash
-	.. total_lines
-	.. tab
-	.. spc
-	.. percentage
-	.. spc
+vim.opt.statusline = background .. spc .. spc
+.. branch .. file_name .. spc .. modified .. spc .. read_only
+.. spc .. spc
+.. align_right .. linepost .. slash .. total_lines .. tab .. spc .. percentage
+.. spc
