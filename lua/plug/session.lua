@@ -1,10 +1,13 @@
-return {
+local SESSION = {
   'rmagatti/auto-session',
-  config = function()
-    local auto_sesion_ok, auto_session = pcall(require, "auto-session")
-    if not auto_sesion_ok then
-      return
-    end
-    auto_session.setup ({})
-  end
 }
+
+function SESSION.config()
+  local auto_sesion_ok, auto_session = pcall(require, "auto-session")
+  if not auto_sesion_ok then
+    return
+  end
+  auto_session.setup ({})
+end
+
+return SESSION

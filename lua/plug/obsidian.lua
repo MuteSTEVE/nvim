@@ -1,10 +1,10 @@
-local PLUG = {
+local OBSIDIAN = {
   "epwalsh/obsidian.nvim",
   ft = "markdown",
   dependencies = "nvim-lua/plenary.nvim",
 }
 
-function PLUG.config()
+function OBSIDIAN.config()
   local obsidian_ok, obsidian = pcall(require, "obsidian")
   if not obsidian_ok then
     return
@@ -38,14 +38,14 @@ function PLUG.config()
     mappings = {
       ["gf"] = {
         action = function()
-          return require("obsidian").util.gf_passthrough()
+          return obsidian.util.gf_passthrough()
         end,
         opts = { noremap = false, expr = true, buffer = true },
       },
       -- Toggle check-boxes.
       ["<leader>ch"] = {
         action = function()
-          return require("obsidian").util.toggle_checkbox()
+          return obsidian.util.toggle_checkbox()
         end,
         opts = { buffer = true },
       },
@@ -134,4 +134,4 @@ function PLUG.config()
   })
 end
 
-return PLUG
+return OBSIDIAN
