@@ -1,8 +1,12 @@
 return {
-  git = {
-    branch = "󰘬 ",
-    signs = "▌",
+  diag_signs = {
+    Error = "󰅙 ",
+    Hint = "󰌵",
+    Info = "",
+    Warn = " ",
   },
+
+  git = { branch = "󰘬 " },
 
   kind_icons = {
     Array = "",
@@ -39,13 +43,6 @@ return {
     Unit = "",
     Value = "",
     Variable = "󰀫",
-  },
-
-  diag_signs = {
-    Error = "󰅙 ",
-    Hint = "󰌵",
-    Info = "",
-    Warn = " ",
   },
 
   telescope = {
