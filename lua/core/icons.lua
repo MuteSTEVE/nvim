@@ -41,7 +41,7 @@ return {
     Variable = "󰀫",
   },
 
-  signs = {
+  diag_signs = {
     Error = "󰅙 ",
     Hint = "󰌵",
     Info = "",
