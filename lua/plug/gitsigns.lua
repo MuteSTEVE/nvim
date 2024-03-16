@@ -10,7 +10,7 @@ function GIT.config()
   end
   gitsigns.setup({})
 
-  vim.keymap.set("n", "<A-g>", "<cmd>Gitsigns preview_hunk<CR>", { silent = true })
+  vim.keymap.set("n", "<leader>gh", "<cmd>Gitsigns preview_hunk<CR>", { silent = true })
 end
 
 return GIT
