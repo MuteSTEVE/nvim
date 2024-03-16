@@ -21,7 +21,7 @@ function LSPCONFIG.config()
 	if not icons_ok then
 		return
 	end
-	local IS = icons.signs
+	local IS = icons.diag_signs
 
 	local langservers = { "pyright", "vimls", "lua_ls" }
 	for _, server in ipairs(langservers) do
@@ -40,8 +40,8 @@ function LSPCONFIG.config()
 		},
 	})
 
-	local signs = { Error = IS.Error, Warn = IS.Warn, Hint = IS.Hint, Info = IS.Info }
-	for type, icon in pairs(signs) do
+	local diag_signs = { Error = IS.Error, Warn = IS.Warn, Hint = IS.Hint, Info = IS.Info }
+	for type, icon in pairs(diag_signs) do
 		local hl = "DiagnosticSign" .. type
 		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 	end
