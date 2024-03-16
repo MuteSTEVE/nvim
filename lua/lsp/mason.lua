@@ -3,7 +3,7 @@ return {
     "williamboman/mason.nvim",
     event = { "BufReadPost", "BufNewFile" },
     cmd = "Mason",
-    keys = { { "<S-m>", "<cmd>Mason<CR>" } },
+    keys = {{ "<S-m>", "<cmd>Mason<CR>" }},
     config = function()
       local mason_ok, mason = pcall(require, "mason")
       if not mason_ok then
@@ -22,7 +22,8 @@ return {
         mason_lspconfig.setup({
           ensure_installed = { "pyright", "vimls", "lua_ls", "marksman", },
         })
-      end},
+      end
+    },
     }
   }
 }
