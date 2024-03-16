@@ -51,32 +51,40 @@ function LSPCONFIG.config()
 	local map = vim.keymap.set
 
 	diag.config({ virtual_text = false })
-	map("n", "<A-r>", telescope.lsp_references, {})
-	map("n", "<A-d>", telescope.diagnostics, {})
-	map("n", "gd", function()
+	map("n", "<leader>lf", telescope.lsp_references)
+	map("n", "<leader>ld", telescope.diagnostics)
+	map("n", "gd",
+  function()
 		buf.definition()
-	end, {})
-	map("n", "<A-h>", function()
+	end)
+	map("n", "<leader>lh",
+  function()
 		buf.hover()
-	end, {})
-	map("n", "<A-f>", function()
+	end)
+	map("n", "<leader>lf",
+  function()
 		diag.open_float()
-	end, {})
-	map("n", "[d", function()
+	end)
+	map("n", "[d",
+  function()
 		diag.goto_next()
-	end, {})
-	map("n", "]d", function()
+	end)
+	map("n", "]d",
+  function()
 		diag.goto_prev()
-	end, {})
-	map("n", "<C-a>", function()
+	end)
+	map("n", "<leader>la",
+  function()
 		buf.code_action()
-	end, {})
-	map("n", "<S-r>", function()
+	end)
+	map("n", "<S-r>",
+  function()
 		buf.rename()
-	end, {})
-	map("i", "<A-h>", function()
+	end)
+	map("i", "<leader>ls",
+  function()
 		buf.signature_help()
-	end, {})
+	end)
 end
 
 return LSPCONFIG

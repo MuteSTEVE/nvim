@@ -48,7 +48,7 @@ lazy.setup({
 
 local map = vim.keymap.set
 local nrs = { noremap = true, silent = true }
-map("n", "<leader>lz", "<cmd>Lazy<CR>", nrs)
+map("n", "<S-l>", "<cmd>Lazy<CR>", nrs)
 map("n", "<leader>lg", function()
   require("lazy.util").float_term({ "lazygit" })
 end, nrs)
