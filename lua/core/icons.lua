@@ -46,7 +46,7 @@ return {
   },
 
   telescope = {
-    find = "   ",
-    select = " ",
+    find = "",
+    select = "",
   },
 }

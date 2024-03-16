@@ -1,41 +1,36 @@
 local TELESCOPE = {
   "nvim-telescope/telescope.nvim",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "kyazdani42/nvim-web-devicons",
-  },
+  dependencies = { "nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons" },
   cmd = "Telescope",
   keys = {
-    {
-      "<leader>f",
-      function()
-        require("telescope.builtin").find_files(require("telescope.themes").get_dropdown({ previewer = false }))
-      end,
-    },
-    {
-      "<leader>F",
+    { "<leader>tf",
       function()
         require("telescope.builtin").find_files(
-          require("telescope.themes").get_dropdown({ previewer = false, hidden = true })
-        )
+          require("telescope.themes").get_dropdown({ previewer = false }))
       end,
     },
-    {
-      "<leader>H",
+    { "<leader>th",
       function()
-        require("telescope.builtin").oldfiles(require("telescope.themes").get_ivy({ previewer = true }))
+        require("telescope.builtin").find_files(
+          require("telescope.themes").get_dropdown({ previewer = false, hidden = true, prompt_title = "Hidden Files"}))
       end,
     },
-    {
-      "<leader>b",
+    { "<leader>to",
       function()
-        require("telescope.builtin").buffers(require("telescope.themes").get_dropdown({ previewer = false }))
+        require("telescope.builtin").oldfiles(
+          require("telescope.themes").get_ivy({ previewer = true }))
       end,
     },
-    {
-      "<C-f>",
+    { "<leader>b",
       function()
-        require("telescope.builtin").live_grep(require("telescope.themes").get_ivy({ previewer = true }))
+        require("telescope.builtin").buffers(
+          require("telescope.themes").get_dropdown({ previewer = false }))
+      end,
+    },
+    { "<leader>tg",
+      function()
+        require("telescope.builtin").live_grep(
+          require("telescope.themes").get_ivy({ previewer = true }))
       end,
     },
   },
@@ -58,8 +53,8 @@ function TELESCOPE.config()
 
   telescope.setup({
     defaults = {
-      prompt_prefix = TL.find,
-      selection_caret = TL.select,
+      prompt_prefix = " " .. TL.find .. " " .. " ",
+      selection_caret = TL.select .. " ",
       mappings = {
         i = {
           ["<C-j>"] = actions.move_selection_next,
