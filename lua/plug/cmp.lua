@@ -2,13 +2,13 @@ local CMP = {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
   dependencies = {
-    { "hrsh7th/cmp-buffer",           event = "InsertEnter" },
-    { "hrsh7th/cmp-path",             event = "InsertEnter" },
-    { "hrsh7th/cmp-cmdline",          event = "InsertEnter" },
-    { "hrsh7th/cmp-nvim-lsp",         event = "InsertEnter" },
-    { "hrsh7th/cmp-nvim-lua",         event = "InsertEnter" },
-    { "saadparwaiz1/cmp_luasnip",     event = "InsertEnter" },
-    { "L3MON4D3/LuaSnip",             event = "InsertEnter" },
+    { "hrsh7th/cmp-buffer", event = "InsertEnter" },
+    { "hrsh7th/cmp-path", event = "InsertEnter" },
+    { "hrsh7th/cmp-cmdline", event = "InsertEnter" },
+    { "hrsh7th/cmp-nvim-lsp", event = "InsertEnter" },
+    { "hrsh7th/cmp-nvim-lua", event = "InsertEnter" },
+    { "saadparwaiz1/cmp_luasnip", event = "InsertEnter" },
+    { "L3MON4D3/LuaSnip", event = "InsertEnter" },
     { "rafamadriz/friendly-snippets", event = "InsertEnter" },
   },
 }
@@ -118,17 +118,19 @@ function CMP.config()
   -- Use buffer source for '/', '?', ':'
   cmp.setup.cmdline({ "/", "?", ":" }, {
     mapping = cmp.mapping.preset.cmdline(),
-    sources = { { name = "buffer" } },
+    sources = {{
+      name = "buffer"
+    }},
   })
 
   -- cmdline setup.
   cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
-    sources = cmp.config.sources({ { name = "path" } }, {
-      {
-        name = "cmdline",
-        option = { ignore_cmds = { "Man", "!" } },
-      },
+    sources = cmp.config.sources({ { name = "path" } }, {{
+      name = "cmdline",
+      option = {
+        ignore_cmds = { "Man", "!" }
+      }},
     }),
   })
 end
