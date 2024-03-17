@@ -49,18 +49,27 @@ lazy.setup({
 local map = vim.keymap.set
 local nrs = { noremap = true, silent = true }
 map("n", "<A-l>", "<cmd>Lazy<CR>", nrs)
-map("n", "<leader>g", function()
-  require("lazy.util").float_term({ "lazygit" })
-end, nrs)
-map("n", "<leader>t", function()
-  require("lazy.util").float_term({ "zsh" })
-end, nrs)
-map("n", "<leader>ll", function()
-  require("lazy.util").float_term({ "lazygit", "log" })
-end, nrs)
-map("n", "<leader>r", function()
-  require("lazy.util").float_term({ "ranger" })
-end, nrs)
-map("n", "<leader>m", function()
-  require("lazy.util").float_term({ "ncmpcpp" })
-end, nrs)
+map("n", "<leader>g",
+  function()
+    require("lazy.util").float_term({ "lazygit" })
+  end)
+map("n", "<leader>lg",
+  function()
+    require("lazy.util").float_term({ "lazygit" })
+  end)
+map("n", "<leader>t",
+  function()
+    require("lazy.util").float_term({ "zsh" })
+  end)
+map("n", "<leader>ll",
+  function()
+    require("lazy.util").float_term({ "lazygit", "log" })
+  end)
+map("n", "<leader>r",
+  function()
+    require("lazy.util").float_term({ "ranger" })
+  end)
+map("n", "<leader>m",
+  function()
+    require("lazy.util").float_term({ "ncmpcpp" })
+  end)
