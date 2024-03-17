@@ -3,19 +3,19 @@ local TELESCOPE = {
   dependencies = { "nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons" },
   cmd = "Telescope",
   keys = {
-    { "<leader>tf",
+    { "<leader>f",
       function()
         require("telescope.builtin").find_files(
           require("telescope.themes").get_dropdown({ previewer = false }))
       end,
     },
-    { "<leader>th",
+    { "<leader><S-f>",
       function()
         require("telescope.builtin").find_files(
           require("telescope.themes").get_dropdown({ previewer = false, hidden = true, prompt_title = "Hidden Files"}))
       end,
     },
-    { "<leader>to",
+    { "<leader>o",
       function()
         require("telescope.builtin").oldfiles(
           require("telescope.themes").get_ivy({ previewer = true }))
@@ -27,7 +27,7 @@ local TELESCOPE = {
           require("telescope.themes").get_dropdown({ previewer = false }))
       end,
     },
-    { "<leader>tg",
+    { "<C-f>",
       function()
         require("telescope.builtin").live_grep(
           require("telescope.themes").get_ivy({ previewer = true }))

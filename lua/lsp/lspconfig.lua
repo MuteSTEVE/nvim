@@ -81,7 +81,7 @@ function LSPCONFIG.config()
   function()
 		buf.rename()
 	end)
-	map("i", "<leader>ls",
+	map("n", "<leader>ls",
   function()
 		buf.signature_help()
 	end)
