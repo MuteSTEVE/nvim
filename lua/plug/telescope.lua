@@ -1,37 +1,35 @@
 local TELESCOPE = {
   "nvim-telescope/telescope.nvim",
-  dependencies = { "nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "kyazdani42/nvim-web-devicons",
+  },
   cmd = "Telescope",
   keys = {
-    { "<leader>f",
-      function()
+    { "<leader>f", function()
         require("telescope.builtin").find_files(
           require("telescope.themes").get_dropdown({ previewer = false }))
-      end,
+      end
     },
-    { "<leader><S-f>",
-      function()
+    { "<leader>F", function()
         require("telescope.builtin").find_files(
-          require("telescope.themes").get_dropdown({ previewer = false, hidden = true, prompt_title = "Hidden Files"}))
-      end,
+          require("telescope.themes").get_dropdown({ previewer = false, hidden = true }))
+      end
     },
-    { "<leader>o",
-      function()
+    { "<leader>o", function()
         require("telescope.builtin").oldfiles(
           require("telescope.themes").get_ivy({ previewer = true }))
-      end,
+      end
     },
-    { "<leader>b",
-      function()
+    { "<leader>b", function()
         require("telescope.builtin").buffers(
           require("telescope.themes").get_dropdown({ previewer = false }))
-      end,
+      end
     },
-    { "<C-f>",
-      function()
+    { "<C-f>", function()
         require("telescope.builtin").live_grep(
           require("telescope.themes").get_ivy({ previewer = true }))
-      end,
+      end
     },
   },
 }
