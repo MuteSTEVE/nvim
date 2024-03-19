@@ -1,5 +1,5 @@
 Config layout
---------------
+---
 
     lua/
     ├─ core/
@@ -10,14 +10,14 @@ Config layout
     │  ├─ options.lua
     │  └─ statusline.lua
     ├─ lsp/
-    │   ├─ lspconfig.lua
-    │   └─ mason.lua
+    │  ├─ lspconfig.lua
+    │  └─ mason.lua
     └─ plug/
-        ├─ cmp.lua
-        ├─ colorscheme.lua
-        ├─ gitsigns.lua
-        ├─ obsidian.lua
-        ├─ session.lua
-        ├─ telescope.lua
-        └─ treesitter.lua
+       ├─ cmp.lua
+       ├─ colorscheme.lua
+       ├─ gitsigns.lua
+       ├─ obsidian.lua
+       ├─ session.lua
+       ├─ telescope.lua
+       └─ treesitter.lua
     init.lua
