@@ -20,3 +20,4 @@ Config layout
         ├─ session.lua
         ├─ telescope.lua
         └─ treesitter.lua
+    init.lua
