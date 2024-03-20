@@ -1,9 +1,11 @@
 <h1 align="center"> ✨ Markdown Preview for (Neo)vim ✨ </h1>
+
 > By Dr.MuteSTEVE ♥️
 
 Screenshot
 ---
 ![lazy-packages](https://raw.githubusercontent.com/MuteSTEVE/nvim/master/img/lazy-packages.png)
+
     lua/
     ├─ core/
     │  ├─ autocmd.lua
