@@ -23,7 +23,7 @@ function LSPCONFIG.config()
 	end
 	local IS = icons.diag_signs
 
-	local langservers = { "pyright", "vimls", "lua_ls" }
+	local langservers = { "pyright", "vimls", "lua_ls", "emmet_language_server", }
 	for _, server in ipairs(langservers) do
 		lspconfig[server].setup({ capabilities = capabilities })
 	end

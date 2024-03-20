@@ -20,7 +20,7 @@ return {
           return
         end
         mason_lspconfig.setup({
-          ensure_installed = { "pyright", "vimls", "lua_ls", "marksman", },
+          ensure_installed = { "pyright", "vimls", "lua_ls", "marksman", "emmet_language_server", },
         })
       end
     },

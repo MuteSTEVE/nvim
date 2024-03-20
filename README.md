@@ -1,8 +1,9 @@
-Config layout
+<h1 align="center"> ✨ Markdown Preview for (Neo)vim ✨ </h1>
+> By Dr.MuteSTEVE ♥️
+
+Screenshot
 ---
-
-I fuckin' hate to make my neovim as heavy as possible with bunch of bloated plugins
-
+![lazy-packages](https://raw.githubusercontent.com/MuteSTEVE/nvim/master/img/lazy-packages.png)
     lua/
     ├─ core/
     │  ├─ autocmd.lua
