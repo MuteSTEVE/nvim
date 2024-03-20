@@ -20,6 +20,7 @@ end
 lazy.setup({
   spec = {
     { import = "lsp" },
+    { import = "md" },
     { import = "plug" },
   },
   performance = {
@@ -47,23 +48,23 @@ lazy.setup({
 })
 
 local map = vim.keymap.set
-local nrs = { noremap = true, silent = true }
-map("n", "<A-l>", "<cmd>Lazy<CR>", nrs)
+local float_term = require("lazy.util").float_term
+map("n", "<A-l>", "<cmd>Lazy<CR>")
 map("n", "<leader>g", function()
-    require("lazy.util").float_term({ "lazygit" })
+    float_term({ "lazygit" })
   end)
 map("n", "<leader>lg", function()
-    require("lazy.util").float_term({ "lazygit" })
+    float_term({ "lazygit" })
   end)
 map("n", "<leader>t", function()
-    require("lazy.util").float_term({ "zsh" })
+    float_term({ "zsh" })
   end)
 map("n", "<leader>ll", function()
-    require("lazy.util").float_term({ "lazygit", "log" })
+    float_term({ "lazygit", "log" })
   end)
 map("n", "<leader>r", function()
-    require("lazy.util").float_term({ "ranger" })
+    float_term({ "ranger" })
   end)
 map("n", "<leader>m", function()
-    require("lazy.util").float_term({ "ncmpcpp" })
+    float_term({ "ncmpcpp" })
   end)
