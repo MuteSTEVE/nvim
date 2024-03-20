@@ -42,6 +42,9 @@ lazy.setup({
     │  ├─ lazy.lua
     │  ├─ options.lua
     │  └─ statusline.lua
+    ├─ cmp/ ─────────────────────> nvim-cmp and it's sources suggestion
+    │  ├─ cmp.lua
+    │  └─ nvim_lua.lua
     ├─ lsp/ ─────────────────────> LSP configuration
     │  ├─ lspconfig.lua
     │  └─ mason.lua

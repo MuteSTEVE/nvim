@@ -6,7 +6,6 @@ local CMP = {
     { "hrsh7th/cmp-path", event = "InsertEnter" },
     { "hrsh7th/cmp-cmdline", event = "InsertEnter" },
     { "hrsh7th/cmp-nvim-lsp", event = "InsertEnter" },
-    { "hrsh7th/cmp-nvim-lua", event = "InsertEnter" },
     { "saadparwaiz1/cmp_luasnip", event = "InsertEnter" },
     { "L3MON4D3/LuaSnip", event = "InsertEnter" },
     { "rafamadriz/friendly-snippets", event = "InsertEnter" },
@@ -77,7 +76,6 @@ function CMP.config()
   }
 
   local sources = {
-    { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "nvim_lsp" },
     { name = "buffer" },

@@ -19,6 +19,7 @@ end
 
 lazy.setup({
   spec = {
+    { import = "cmp" },
     { import = "lsp" },
     { import = "md" },
     { import = "plug" },
