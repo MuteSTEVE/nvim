@@ -1,4 +1,4 @@
-<h1 align="center"> ✨ Markdown Preview for (Neo)vim ✨ </h1>
+<h1 align="center"> Dr.MuteSTEVE Neovim config 🐧</h1>
 
 > By Dr.MuteSTEVE ♥️
 
