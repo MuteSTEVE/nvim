@@ -1,6 +1,8 @@
 Config layout
 ---
 
+I fuckin' hate to make my neovim as heavy as possible with bunch of bloated plugins
+
     lua/
     ├─ core/
     │  ├─ autocmd.lua
