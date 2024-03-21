@@ -16,13 +16,13 @@ I only use the most crucial and important plugins, like: [Telescope](https://git
 - [x] [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) 
 
 > Linux & [UNIX-HATERS](https://en.wikipedia.org/wiki/The_UNIX-HATERS_Handbook) better start bitching with their [soydev](https://www.urbandictionary.com/define.php?term=Soydev) vscode
-> probably running spyware called Microsoft windows, literally [Nineteen Eighty-Four](https://id.wikipedia.org/wiki/Nineteen_Eighty-Four) 👁️
+> probably running spyware called Microsoft windows 🪟, literally [Nineteen Eighty-Four](https://id.wikipedia.org/wiki/Nineteen_Eighty-Four) 👁️
 
-Structure 🧬
+Structure ⛓️
 ---
-I use [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading) technic to load all the plugins, so it won't feel heavy as i jumped through different file because of the pluins trigger activation. You can find it online on `how to lazy load neovim plugins` with [lazy.nvim](https://github.com/folke/lazy.nvim) or just read the docs of [lazy.nvim](https://github.com/folke/lazy.nvim) or if you are suffered from tiktok [brainrot](https://news.yahoo.com/what-is-brain-rot-tiktokers-are-using-the-term-to-describe-the-impact-of-being-chronically-online-211105483.html) that has tremendous little attention span you can do the following in your [lazy.nvim](https://github.com/folke/lazy.nvim) configuration:
+I use [Lazy loading 💤](https://en.wikipedia.org/wiki/Lazy_loading) technic to load all the plugins, so it won't feel heavy as i jumped through different file because of the pluins trigger activation. You can find it online on `how to lazy load neovim plugins` with [lazy.nvim](https://github.com/folke/lazy.nvim) or just read the docs of [lazy.nvim](https://github.com/folke/lazy.nvim) or if you are suffered from tiktok [brainrot](https://news.yahoo.com/what-is-brain-rot-tiktokers-are-using-the-term-to-describe-the-impact-of-being-chronically-online-211105483.html) that has tremendous little attention span you can do the following in your [lazy.nvim](https://github.com/folke/lazy.nvim) configuration:
 ```lua
-lazy.setup({
+require("lazy").setup({
   spec = {
     -- Change the string into your plugins directory,
     -- for example my plugins stored in lua/lsp, you don't need to include the lua directory too
@@ -57,7 +57,11 @@ lazy.setup({
 
 Bonus 💥
 ---
-Did you know that [lazy.nvim](https://github.com/folke/lazy.nvim) has builtin `float term API`, yes you can actually use it for something like terminal or lazygit whatever your shell command is. I personally use that API to use [ranger](https://github.com/ranger/ranger)   file manager inside of neovim, eliminates the needs of file browser plugins
+Did you know that [lazy.nvim](https://github.com/folke/lazy.nvim) has builtin `float term API`, yes you can actually use it for something like terminal or lazygit whatever your shell command is. I personally use that API to use:
+- [ranger](https://github.com/ranger/ranger) 📂 inside of neovim, eliminates the needs of file browser plugins
+- [lazygit](https://github.com/jesseduffield/lazygit) 💤 to use git with floating UI window
+- [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) 🎵to listen music
+- [zsh shell](https://ohmyz.sh/) 🐌 if i need to do simple things with floating shell
 ```lua
 local map = vim.keymap.set
 local float_term = require("lazy.util").float_term
