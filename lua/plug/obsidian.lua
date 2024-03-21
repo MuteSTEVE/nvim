@@ -29,12 +29,6 @@ function OBSIDIAN.config()
     },
     notes_subdir = "notes",
     log_level = vim.log.levels.INFO,
-    daily_notes = {
-      folder = "notes/dailies",
-      date_format = "%Y-%m-%d",
-      alias_format = "%B %-d, %Y",
-      template = nil,
-    },
     mappings = {
       ["gf"] = {
         action = function()
@@ -70,15 +64,6 @@ function OBSIDIAN.config()
         end
       end
       return out
-    end,
-    templates = {
-      subdir = "templates",
-      date_format = "%Y-%m-%d",
-      time_format = "%H:%M",
-      substitutions = {},
-    },
-    follow_url_func = function(url)
-      vim.fn.jobstart({ "open", url }) -- Mac OS
     end,
     use_advanced_uri = false,
     open_app_foreground = false,
