@@ -80,9 +80,7 @@ map("n", "<leader>r", function()
   end)
 ```
 ![ranger](./img/ranger.png) 
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
 - [lazygit](https://github.com/jesseduffield/lazygit) 💤 to use git with floating UI window
-</a>
 ```lua
 local map = vim.keymap.set
 local float_term = require("lazy.util").float_term
@@ -99,7 +97,6 @@ map("n", "<leader>ll", function()
 
 ![lazygit](./img/lazygit.png) 
 - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) 🎵to listen music
-</a>
 ```lua
 local map = vim.keymap.set
 local float_term = require("lazy.util").float_term
