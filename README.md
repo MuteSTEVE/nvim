@@ -1,4 +1,4 @@
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
 <h1 align="center"> Dr.MuteSTEVE Neovim config 📝</h1>
 </a>
 
@@ -16,8 +16,8 @@ I only use the most important plugins, like: [Telescope](https://github.com/nvim
 
 My configuration is original and not based on any neovim distro for the sake of minimalist
 
-<a href="https://www.youtube.com/watch?v=dqw4w9wgxcq">
-<img src="./img/lazy-packages.png">
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
+    <img src="./img/lazy-packages.png">
 </a>
 
 [UNIX Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) based configuation🐧
@@ -79,7 +79,10 @@ map("n", "<leader>r", function()
     float_term("ranger")
   end)
 ```
-![ranger](./img/ranger.png) 
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
+<img src="./img/ranger.png">
+</a>
+
 - [lazygit](https://github.com/jesseduffield/lazygit) 💤 to use git with floating UI window
 ```lua
 local map = vim.keymap.set
@@ -95,7 +98,10 @@ map("n", "<leader>ll", function()
   end)
 ```
 
-![lazygit](./img/lazygit.png) 
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
+<img src="./img/lazygit.png">
+</a>
+
 - [ncmpcpp](https://github.com/ncmpcpp/ncmpcpp) 🎵to listen music
 ```lua
 local map = vim.keymap.set
@@ -105,7 +111,10 @@ map("n", "<leader>m", function()
   end)
 ```
 
-![ncmpcpp](./img/ncmpcpp.png) 
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
+    <img src="./img/ncmpcpp.png">
+</a>
+
 - [zsh shell](https://ohmyz.sh/) 🐌 if i need to do simple things with floating shell
 
 ```lua
@@ -115,14 +124,17 @@ map("n", "<leader>t", function()
     float_term("zsh")
   end)
 ```
-![zsh](./img/zsh.png) 
+
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
+<img src="./img/zsh.png">
+</a>
 
 Yes i indeed use [picom](https://wiki.archlinux.org/title/Picom) to make a beautiful ✨ transparent window and [tmux](https://github.com/tmux/tmux) for terminal multiplexer
 
 <h3 align="center">Closing</h3>
 <p align="center">That's about it from me, thank you so much for visiting my lonley repo 🫠</p>
 
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
     <div align="center">
         <img src="./img/IuseArchbtw.jpg" width="400" align="center">
     </div>
@@ -130,7 +142,7 @@ Yes i indeed use [picom](https://wiki.archlinux.org/title/Picom) to make a beaut
 
 <h1 align="center">Don't forget to give ⭐ to this repo</h1>
 
-<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
     <div align="center">
         <img src="./img/meme.jpg" width="400" align="center">
     </div>

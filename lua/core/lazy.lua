@@ -47,7 +47,8 @@ lazy.setup({
 })
 
 local map = vim.keymap.set
-local float_term_ok, float_term = pcall(require, "lazy.util")
+local float_term_ok, ft = pcall(require, "lazy.util")
+local float_term = ft.float_term
 if not float_term_ok then
   return
 end
