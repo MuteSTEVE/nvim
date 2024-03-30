@@ -27,7 +27,6 @@ function OBSIDIAN.config()
         },
       },
     },
-    notes_subdir = "notes",
     log_level = vim.log.levels.INFO,
     mappings = {
       ["gf"] = {

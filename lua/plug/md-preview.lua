@@ -1,4 +1,4 @@
-return {
+local MDP = {
   "iamcco/markdown-preview.nvim",
   ft = "markdown",
   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
@@ -7,3 +7,10 @@ return {
     vim.fn["mkdp#util#install"]()
   end,
 }
+
+function MDP.config()
+  -- set to 1, echo preview page URL in cmdline window when opening preview page
+  vim.g.mkdp_echo_preview_url = 1
+end
+
+return MDP
