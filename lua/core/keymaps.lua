@@ -59,3 +59,7 @@ map("i", [["]], [[""<left>]])
 map("i", "(", "()<left>")
 map("i", "[", "[]<left>")
 map("i", "{", "{}<left>")
+
+-- Change spellang, en_us and id_id
+map("n", "<leader>en", "<cmd>set spelllang=en | echo 'Using English spell language'<CR>")
+map("n", "<leader>id", "<cmd>set spelllang=id | echo 'Using Indonesia spell language'<CR>")
