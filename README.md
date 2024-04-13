@@ -4,18 +4,15 @@
 
 > By Dr.MuteSTEVE
 
-Screenshot 📸
----
-Hello there 👋 I'm an 18 years old [digital minimalist](https://archive.org/details/digital-minimalism-by-cal-newport) and i love [Neovim](https://neovim.io/) , [GNU/Linux](https://www.gnu.org/gnu/linux-and-gnu.html) and [UNIX](https://id.wikipedia.org/wiki/Unix) in general ♥️
+<h3 align="center">Intro</h3>
 
-I use Neovim for everything from learn to code, learn a project and taking daily notes 🗒️
-
-I have no intention to get into IT job 💼 i just love learning new things as hobby and life experience
-
-I only use the most important plugins, like: [Telescope](https://github.com/nvim-telescope/telescope.nvim), [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig), [nvim-cmp](https://github.com/hrsh7th/nvim-cmp), [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter), [mason](https://github.com/williamboman/mason.nvim) and the rest are just suited for my needs
-
+Hello there 👋 I'm an 18 years old [digital minimalist](https://archive.org/details/digital-minimalism-by-cal-newport) and i love [Neovim](https://neovim.io/) , [GNU/Linux](https://www.gnu.org/gnu/linux-and-gnu.html) and [UNIX](https://id.wikipedia.org/wiki/Unix) in general ♥️\
+I use Neovim for everything from learn to code, learn a project and taking daily notes 🗒️\
+I have no intention to get into IT job 💼 i just love learning new things as hobby and life experience\
 My configuration is original and not based on any neovim distro for the sake of minimalist
 
+Screenshot 📸
+---
 <a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
     <img src="./img/lazy-packages.png">
 </a>
@@ -23,8 +20,8 @@ My configuration is original and not based on any neovim distro for the sake of 
 [UNIX Philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) based configuation🐧
 ---
 - [x] [KISS](https://en.wikipedia.org/wiki/KISS_principle) (Less plugins = less breaking)
-- [x] [Minimalism](https://en.wikipedia.org/wiki/Minimalism_(computing)) (Simply the nature of neovim)
-- [x] [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) (Use IDE, don't make neovim bloated)
+- [x] [Minimalism](https://en.wikipedia.org/wiki/Minimalism_(computing)) (Simply the nature of UNIX application)
+- [x] [YAGNI](https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it) (Use full-blown IDE, **DON'T MAKE NEOVIM BLOATED**)
 > You're probably soydev vscode spyware user called Microsoft windows 🪟 literally [Nineteen Eighty-Four](https://id.wikipedia.org/wiki/Nineteen_Eighty-Four) 👁️
 
 Structure ⛓️
@@ -42,30 +39,57 @@ require("lazy").setup({
 )
 ```
     lua/
-    ├─ core/ ────────────────────> All the core components, including lazy.nvim
-    │  ├─ autocmd.lua ───────────> Handling action based on VIM trigger events
-    │  ├─ icons.lua ─────────────> Returning plugins icons when needed
-    │  ├─ keymaps.lua ───────────> Custom keymaps
-    │  ├─ ⚡ lazy.lua ───────────> Lazy.nvim package manager
-    │  ├─ options.lua ───────────> Avaiable builtin options from vim
-    │  └─ statusline.lua ────────> Custom vim statusline
-    │
-    ├─ lsp/ ─────────────────────> LSP configuration ───────┐
-    │  ├─ lspconfig.lua ────┐                               ├────> Lazy loaded directory
-    │  └─ mason.lua         │                               │
-    └─ plug/ ───────────────┼────> Plugins configuration ───┘
-       ├─ cmp.lua           │
-       ├─ colorscheme.lua   │
-       ├─ gitsigns.lua      ├────> All the plugins need to "return" tables of configuration
-       ├─ md-preview.lua    │
-       ├─ obsidian.lua      │
-       ├─ session.lua       │
-       ├─ telescope.lua     │
-       └─ treesitter.lua ───┘
+    ├─ core/ ────────────────────> All the core components ────────────────────────────┐
+    │  ├─ autocmd.lua ───────────> Handling action based on VIM trigger events         │
+    │  ├─ icons.lua ─────────────> Returning plugins icons when needed                 │
+    │  ├─ keymaps.lua ───────────> Custom keymaps                                      │
+    │  ├─ ⚡ lazy.lua ───────────> Lazy.nvim package manager ────────┐                 │
+    │  └─ options.lua ───────────> Neovim Options                    │                 │
+    │                                                                │                 │
+    ├─ ⚡ lsp/ ────────────> LSP configuration ────────┐             v                 │
+    │  ├─ lspconfig.lua                                ├────> Lazy loaded directory    │
+    │  └─ mason.lua                                    │             │                 │
+    └─ ⚡ plug/ ───────────> Plugins configuration ────┘             │                 │
+       ├─ cmp.lua                                                    │                 │
+       ├─ colorscheme.lu                                             │                 │
+       ├─ gitsigns.lua                                               │                 │
+       ├─ md-preview.lua         "return" tables of configuration ───┘                 │
+       ├─ obsidian.lua                                                                 │
+       ├─ session.lua                                                                  │
+       ├─ telescope.lua                                                                │
+       └─ treesitter.lua                                                               │
+                                                                                       │
+    init.lua ────────────────────> Sourcing lua/core/ directory <──────────────────────┘
 
-    ⭐ init.lua ────────────────────> Sourcing everything here
+You can draw that cool TUI line too, find it [here](https://en.wikipedia.org/wiki/Box-drawing_character)
 
-Curious to draw that cool TUI line? find it [here](https://en.wikipedia.org/wiki/Box-drawing_character). For more information, please just look up on each configuration
+Plugins 🧰
+---
+I only use the most bare minimum to get a perfect yet simple neovim configuration\
+There are however, the Honored plugins that are just so good that i can't live without
+- ⌛ [Auto-session](https://github.com/rmagatti/auto-session)  a small automated session manager for Neovim (use for restoring [tmux](https://github.com/tmux/tmux)  session)
+- 🐙 [Gitsigns](https://github.com/lewis6991/gitsigns.nvim) Git integration for buffers
+- 📖 [Markdown-preview](https://github.com/iamcco/markdown-preview.nvim) markdown previewer plugin for (neo)vim
+- 🌲 [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) nvim Treesitter configurations and abstraction layer
+- 🦄 [Nvim-web-devicons](url) lua fork of vim-web-devicons for neovim
+- 🪨 [Obsidian.nvim](https://github.com/epwalsh/obsidian.nvim) obsidian 🤝 Neovim ([Obsidian.md](https://obsidian.md/) markdown editor implementation in neovim)
+- 🎨 [Rose-pine](https://github.com/rose-pine/neovim) soho vibes for Neovim (the colorscheme that i use)
+
+Honored Plugins that i can't live without
+- 📦 [Mason.nvim](https://github.com/williamboman/mason.nvim) Portable package manager for Neovim that runs everywhere Neovim runs.
+    - [Mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+Easily install and manage LSP servers, DAP servers, linters, and formatters
+- 🌏 [Nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) quickstart configs for Nvim LSP
+- 📝 [Nvim-cmp](https://github.com/hrsh7th/nvim-cmp) a completion plugin for neovim coded in Lua
+    - [Cmp-buffer](https://github.com/hrsh7th/cmp-buffer) nvim-cmp source for buffer words
+    - [Cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) nvim-cmp source for vim's cmdline
+    - [Cmp-luasnip](https://github.com/saadparwaiz1/cmp_luasnip) luasnip completion source for nvim-cmp
+        - 📎 [Luasnip](https://github.com/L3MON4D3/LuaSnip) snippet Engine for Neovim written in Lua
+        - 📎 [Friendly-snippets](https://github.com/rafamadriz/friendly-snippets) set of preconfigured snippets for different languages
+    - [Cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) nvim-cmp source for neovim's built-in language server client
+    - [Cmp-nvim-lua](https://github.com/hrsh7th/cmp-nvim-lua) nvim-cmp source for neovim Lua API
+    - [Cmp-path](https://github.com/hrsh7th/cmp-path) nvim-cmp source for filesystem paths
+- 🔭 [Telescope](https://github.com/nvim-telescope/telescope.nvim) Find, Filter, Preview, Pick. All lua, all the time
 
 Bonus 💥
 ---
@@ -131,7 +155,7 @@ map("n", "<leader>t", function()
 
 Yes i indeed use [picom](https://wiki.archlinux.org/title/Picom) to make a beautiful ✨ transparent window and [tmux](https://github.com/tmux/tmux) for terminal multiplexer
 
-<h3 align="center">Closing</h3>
+<h3 align="center">Outro</h3>
 <p align="center">That's about it from me, thank you so much for visiting my lonley repo 🫠</p>
 
 <a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
