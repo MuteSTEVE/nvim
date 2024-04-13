@@ -44,19 +44,19 @@ require("lazy").setup({
     │  ├─ lazy.lua ──────────────> Lazy.nvim package manager ──────────────┐                 │
     │  └─ options.lua ───────────> Neovim Options                          │                 │
     │                                                                      │                 │
-    ├─ lsp/ ─────────────────────> LSP configuration ────────┐             v                 │
+    ├─ lsp/ ─────────────────────> Lsp configuration ────────┐             │                 │
     │  ├─ lspconfig.lua                                      ├────> Lazy loaded directory    │
     │  └─ mason.lua                                          │             │                 │
-    └─ plug/ ────────────────────> Plugins configuration ────┘             │                 │
-       ├─ cmp.lua                                                          │                 │
-       ├─ colorscheme.lu                                                   │                 │
-       ├─ gitsigns.lua                                                     │                 │
-       ├─ md-preview.lua           return tables of configuration <────────┘                 │
-       ├─ obsidian.lua                                                                       │
-       ├─ session.lua                                                                        │
-       ├─ telescope.lua                                                                      │
-       └─ treesitter.lua                                                                     │
-                                                                                             │
+    ├─ plug/ ────────────────────> Plugins configuration ────┘             │                 │
+    │  ├─ cmp.lua                                                          │                 │
+    │  ├─ colorscheme.lu                                                   │                 │
+    │  ├─ gitsigns.lua                                                     │                 │
+    │  ├─ md-preview.lua           Return tables of configuration <────────┘                 │
+    │  ├─ obsidian.lua                                                                       │
+    │  ├─ session.lua                                                                        │
+    │  ├─ telescope.lua                                                                      │
+    │  └─ treesitter.lua                                                                     │
+    │                                                                                        │
     init.lua ────────────────────> Sourcing lua/core/ directory <────────────────────────────┘
 
 You can draw that cool TUI line too, find it [here](https://en.wikipedia.org/wiki/Box-drawing_character)
