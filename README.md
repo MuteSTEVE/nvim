@@ -37,27 +37,27 @@ require("lazy").setup({
 )
 ```
     lua/
-    ├─ core/ ────────────────────> All the core components ────────────────────────────┐
-    │  ├─ autocmd.lua ───────────> Handling action based on VIM trigger events         │
-    │  ├─ icons.lua ─────────────> Returning plugins icons when needed                 │
-    │  ├─ keymaps.lua ───────────> Custom keymaps                                      │
-    │  ├─ lazy.lua ──────────────> Lazy.nvim package manager ────────┐                 │
-    │  └─ options.lua ───────────> Neovim Options                    │                 │
-    │                                                                │                 │
-    ├─ lsp/ ───────────────> LSP configuration ────────┐             v                 │
-    │  ├─ lspconfig.lua                                ├────> Lazy loaded directory    │
-    │  └─ mason.lua                                    │             │                 │
-    └─ plug/ ──────────────> Plugins configuration ────┘             │                 │
-       ├─ cmp.lua                                                    │                 │
-       ├─ colorscheme.lu                                             │                 │
-       ├─ gitsigns.lua                                               │                 │
-       ├─ md-preview.lua         "return" tables of configuration ───┘                 │
-       ├─ obsidian.lua                                                                 │
-       ├─ session.lua                                                                  │
-       ├─ telescope.lua                                                                │
-       └─ treesitter.lua                                                               │
-                                                                                       │
-    init.lua ────────────────────> Sourcing lua/core/ directory <──────────────────────┘
+    ├─ core/ ────────────────────> All the core components ──────────────────────────────────┐
+    │  ├─ autocmd.lua ───────────> Handling action based on VIM trigger events               │
+    │  ├─ icons.lua ─────────────> Returning plugins icons when needed                       │
+    │  ├─ keymaps.lua ───────────> Custom keymaps                                            │
+    │  ├─ lazy.lua ──────────────> Lazy.nvim package manager ──────────────┐                 │
+    │  └─ options.lua ───────────> Neovim Options                          │                 │
+    │                                                                      │                 │
+    ├─ lsp/ ─────────────────────> LSP configuration ────────┐             v                 │
+    │  ├─ lspconfig.lua                                      ├────> Lazy loaded directory    │
+    │  └─ mason.lua                                          │             │                 │
+    └─ plug/ ────────────────────> Plugins configuration ────┘             │                 │
+       ├─ cmp.lua                                                          │                 │
+       ├─ colorscheme.lu                                                   │                 │
+       ├─ gitsigns.lua                                                     │                 │
+       ├─ md-preview.lua           return tables of configuration <────────┘                 │
+       ├─ obsidian.lua                                                                       │
+       ├─ session.lua                                                                        │
+       ├─ telescope.lua                                                                      │
+       └─ treesitter.lua                                                                     │
+                                                                                             │
+    init.lua ────────────────────> Sourcing lua/core/ directory <────────────────────────────┘
 
 You can draw that cool TUI line too, find it [here](https://en.wikipedia.org/wiki/Box-drawing_character)
 
