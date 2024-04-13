@@ -6,7 +6,10 @@ return {
     Warn = " ",
   },
 
-  git = { branch = "󰘬 " },
+  telescope = {
+    find = "",
+    select = "",
+  },
 
   kind_icons = {
     Array = "",
@@ -43,10 +46,5 @@ return {
     Unit = "",
     Value = "",
     Variable = "󰀫",
-  },
-
-  telescope = {
-    find = "",
-    select = "",
   },
 }

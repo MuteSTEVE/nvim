@@ -4,7 +4,6 @@ local config = {
   "core.lazy",
   "core.icons",
   "core.autocmd",
-  "core.statusline",
 }
 
 local function source_module(module_name)
