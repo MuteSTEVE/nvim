@@ -1,10 +1,10 @@
-local ROSE = {
+local PLUG = {
   "rose-pine/neovim",
   lazy = false,
   priority = 1000,
 }
 
-function ROSE.config()
+function PLUG.config()
   local rose_pine_ok, rose_pine = pcall(require, "rose-pine")
   if not rose_pine_ok then
     return
@@ -22,4 +22,4 @@ function ROSE.config()
   vim.cmd("colorscheme rose-pine")
 end
 
-return ROSE
+return PLUG

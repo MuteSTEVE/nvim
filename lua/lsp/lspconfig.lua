@@ -1,9 +1,9 @@
-local LSPCONFIG = {
+local PLUG = {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPost", "BufNewFile" },
 }
 
-function LSPCONFIG.config()
+function PLUG.config()
 	local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
 	if not lspconfig_ok then
 		return
@@ -21,15 +21,14 @@ function LSPCONFIG.config()
 	if not icons_ok then
 		return
 	end
-	local IS = icons.diag_signs
+	local DS = icons.diag_signs
 
 	local langservers = { "pyright", "vimls", "lua_ls", "emmet_language_server", }
 	for _, server in ipairs(langservers) do
 		lspconfig[server].setup({ capabilities = capabilities })
 	end
 
-	-- To shutup neovim complaining about "undefined global vim"
-	-- Doesn't really matter tho, linter will still complaining
+	-- To shutup neovim complaining about "undefined global vim" in lua file
 	lspconfig.lua_ls.setup({
 		settings = {
 			Lua = {
@@ -40,7 +39,7 @@ function LSPCONFIG.config()
 		},
 	})
 
-	local diag_signs = { Error = IS.Error, Warn = IS.Warn, Hint = IS.Hint, Info = IS.Info }
+	local diag_signs = { Error = DS.Error, Warn = DS.Warn, Hint = DS.Hint, Info = DS.Info }
 	for type, icon in pairs(diag_signs) do
 		local hl = "DiagnosticSign" .. type
 		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
@@ -79,4 +78,4 @@ function LSPCONFIG.config()
 	end)
 end
 
-return LSPCONFIG
+return PLUG

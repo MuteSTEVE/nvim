@@ -1,10 +1,10 @@
-local TREESITTER = {
+local PLUG = {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPost", "BufNewFile" },
   build = "<cmd>TSUpdate",
 }
 
-function TREESITTER.config()
+function PLUG.config()
   local treesitter_ok, treesitter = pcall(require, "nvim-treesitter.configs")
   if not treesitter_ok then
     return
@@ -25,4 +25,4 @@ function TREESITTER.config()
   })
 end
 
-return TREESITTER
+return PLUG

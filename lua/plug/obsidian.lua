@@ -1,10 +1,10 @@
-local OBSIDIAN = {
+local PLUG = {
   "epwalsh/obsidian.nvim",
   ft = "markdown",
   dependencies = "nvim-lua/plenary.nvim",
 }
 
-function OBSIDIAN.config()
+function PLUG.config()
   local obsidian_ok, obsidian = pcall(require, "obsidian")
   if not obsidian_ok then
     return
@@ -118,4 +118,4 @@ function OBSIDIAN.config()
   })
 end
 
-return OBSIDIAN
+return PLUG
