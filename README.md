@@ -24,6 +24,11 @@ Screenshot 📸
 
 Structure ⛓️
 ---
+> Functions should do one thing. They should do it well. They should do it only\
+~ Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship
+
+My configuration follow the clean code principle, that's why i break down everything into their own smaller respective module. Instead of traditional one big chunk of `init.lua` file
+
 I use [Lazy loading 💤](https://en.wikipedia.org/wiki/Lazy_loading) technic to load all the plugins, so it won't feel heavy as i jumped through different file because of the pluins trigger activation. You can find it online on `how to lazy load neovim plugins` with [lazy.nvim](https://github.com/folke/lazy.nvim) or just read the docs of [lazy.nvim](https://github.com/folke/lazy.nvim) or if you are suffered from tiktok [brainrot](https://news.yahoo.com/what-is-brain-rot-tiktokers-are-using-the-term-to-describe-the-impact-of-being-chronically-online-211105483.html) that has tremendous little attention span you can do the following in your Lazy configuration:
 ```lua
 -- lazy.lua ⚡
