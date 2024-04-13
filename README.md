@@ -1,6 +1,4 @@
-<a href="https://www.youtube.com/watch?v=bYtdqwkZNPs">
 <h1 align="center"> Dr.MuteSTEVE Neovim config 📝</h1>
-</a>
 
 > By Dr.MuteSTEVE
 

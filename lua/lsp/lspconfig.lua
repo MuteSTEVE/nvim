@@ -53,36 +53,28 @@ function LSPCONFIG.config()
 	diag.config({ virtual_text = false })
 	map("n", "<leader>lf", telescope.lsp_references)
 	map("n", "<leader>ld", telescope.diagnostics)
-	map("n", "gd",
-  function()
+	map("n", "gd", function()
 		buf.definition()
 	end)
-	map("n", "<leader>lh",
-  function()
+	map("n", "<leader>lh", function()
 		buf.hover()
 	end)
-	map("n", "<leader>lf",
-  function()
+	map("n", "<leader>lf", function()
 		diag.open_float()
 	end)
-	map("n", "[d",
-  function()
+	map("n", "[d", function()
 		diag.goto_next()
 	end)
-	map("n", "]d",
-  function()
+	map("n", "]d", function()
 		diag.goto_prev()
 	end)
-	map("n", "<leader>la",
-  function()
+	map("n", "<leader>la", function()
 		buf.code_action()
 	end)
-	map("n", "<S-r>",
-  function()
+	map("n", "<S-r>", function()
 		buf.rename()
 	end)
-	map("n", "<leader>ls",
-  function()
+	map("n", "<leader>ls", function()
 		buf.signature_help()
 	end)
 end
