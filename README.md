@@ -41,13 +41,13 @@ require("lazy").setup({
     │  ├─ autocmd.lua ───────────> Handling action based on VIM trigger events         │
     │  ├─ icons.lua ─────────────> Returning plugins icons when needed                 │
     │  ├─ keymaps.lua ───────────> Custom keymaps                                      │
-    │  ├─ ⚡ lazy.lua ───────────> Lazy.nvim package manager ─────────┐                 │
+    │  ├─ lazy.lua ──────────────> Lazy.nvim package manager ────────┐                 │
     │  └─ options.lua ───────────> Neovim Options                    │                 │
     │                                                                │                 │
-    ├─ ⚡ lsp/ ────────────> LSP configuration ─────────┐             v                 │
+    ├─ lsp/ ───────────────> LSP configuration ────────┐             v                 │
     │  ├─ lspconfig.lua                                ├────> Lazy loaded directory    │
     │  └─ mason.lua                                    │             │                 │
-    └─ ⚡ plug/ ───────────> Plugins configuration ─────┘             │                 │
+    └─ plug/ ──────────────> Plugins configuration ────┘             │                 │
        ├─ cmp.lua                                                    │                 │
        ├─ colorscheme.lu                                             │                 │
        ├─ gitsigns.lua                                               │                 │
