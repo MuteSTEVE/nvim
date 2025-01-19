@@ -2,7 +2,7 @@ local PLUG = {
   "nvim-telescope/telescope.nvim",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "kyazdani42/nvim-web-devicons",
+    -- "kyazdani42/nvim-web-devicons",
   },
   cmd = "Telescope",
   keys = {

@@ -50,3 +50,8 @@ vim.opt.runtimepath:remove("/usr/share/vim/vimfiles")
 if not vim.fn.exists("guin running") then
   vim.o.t_Co = 256
 end
+
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NonText', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'Normal', { ctermbg = 'none' })
+vim.api.nvim_set_hl(0, 'NonText', { ctermbg = 'none' })

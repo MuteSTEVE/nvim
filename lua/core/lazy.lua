@@ -47,28 +47,4 @@ lazy.setup({
 })
 
 local map = vim.keymap.set
-local float_term_ok, ft = pcall(require, "lazy.util")
-local float_term = ft.float_term
-if not float_term_ok then
-  return
-end
-
-map("n", "<A-l>", "<cmd>Lazy<CR>")
-map("n", "<leader>g", function()
-    float_term("lazygit")
-  end)
-map("n", "<leader>lg", function()
-    float_term("lazygit")
-  end)
-map("n", "<leader>ll", function()
-    float_term({ "lazygit", "log" })
-  end)
-map("n", "<leader>r", function()
-    float_term("ranger")
-  end)
-map("n", "<leader>m", function()
-    float_term("ncmpcpp")
-  end)
-map("n", "<leader>t", function()
-    float_term("bash")
-  end)
+map("n", "<C-l>", "<cmd>Lazy<CR>")
