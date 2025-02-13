@@ -23,10 +23,10 @@ map("n", "n", "nzzzv", NRS)
 map("n", "<leader>x", "<cmd>!chmod +x %<CR>", NRS)
 
 -- Some useful keybinds VScode move line keybind
-map("n", "K", "<cmd>move .-2<CR>==", NRS)
-map("n", "J", "<cmd>move .+1<CR>==", NRS)
-map("v", "J", "<cmd>m '>+1<CR>gv=gv", NRS)
-map("v", "K", "<cmd>m '<-2<CR>gv=gv", NRS)
+map("n", "<A-k>", "<cmd>move .-2<CR>==", NRS)
+map("n", "<A-j>", "<cmd>move .+1<CR>==", NRS)
+map("v", "<A-j>", "<cmd>m '>+1<CR>gv=gv", NRS)
+map("v", "<A-k>", "<cmd>m '<-2<CR>gv=gv", NRS)
 
 -- buffer movement
 map("n", "Z", "<cmd>bp<CR>", NRS)

@@ -11,6 +11,15 @@ return {
     select = "",
   },
 
+  git = {
+    signs = "▌",
+    change = "▌",
+    delete = '_',
+    topdelete = '‾',
+    changedelete = '〜',
+    untracked = '┆',
+  },
+
   kind_icons = {
     Array = "",
     Boolean = "",
