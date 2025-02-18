@@ -23,7 +23,15 @@ function PLUG.config()
 	end
 	local DS = icons.diag_signs
 
-	local langservers = { "pyright", "vimls", "lua_ls", "emmet_language_server", }
+	local langservers = {
+		"bashls",
+		"clangd",
+		"emmet_language_server",
+		"lua_ls",
+		"marksman",
+		"pyright",
+		"vimls",
+	}
 	for _, server in ipairs(langservers) do
 		lspconfig[server].setup({ capabilities = capabilities })
 	end
