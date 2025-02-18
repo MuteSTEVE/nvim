@@ -10,7 +10,19 @@ function PLUG.config()
     return
   end
 
-  colorizer.setup()
+  colorizer.setup({
+    css = {
+      RGB      = true,
+      RRGGBB   = true,
+      names    = true,
+      RRGGBBAA = true,
+      rgb_fn   = true,
+      hsl_fn   = true,
+      css      = true,
+      css_fn   = true,
+    },
+    html = { names = false; }
+  })
 end
 
 return PLUG
