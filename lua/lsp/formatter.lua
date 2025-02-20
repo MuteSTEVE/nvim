@@ -1,6 +1,6 @@
 local CONFORM = {
 	"stevearc/conform.nvim",
-	ft = { "lua", "python", "css", "javascript", "html" },
+	ft = { "c", "cpp", "lua", "python", "css", "javascript", "html" },
 }
 
 function CONFORM.config()
@@ -20,13 +20,7 @@ function CONFORM.config()
 			lua = { "stylua" },
 			python = { "isort", "black" },
 		},
-		vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-			group = "CustomBuffer",
-			pattern = { "lua", "python", "css", "javascript", "html" },
-			callback = function(args)
-				require("conform").format({ bufnr = args.buf })
-			end,
-		}),
+		-- Autoformat in lua/core/autocmd.lua
 	})
 end
 
