@@ -22,12 +22,6 @@ autocmd("TermLeave", {
 	pattern = "*",
 	command = "set laststatus=3",
 })
--- Remove annoying message '[Process exitt 05]'
-autocmd("TermClose", {
-	group = "TerminalMode",
-	pattern = "*",
-	command = "execute 'bdelete!' . expand('<abuf>')",
-})
 -- Always start terminal in insert mode
 autocmd("TermOpen", {
 	group = "TerminalMode",
