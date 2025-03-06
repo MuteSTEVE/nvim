@@ -54,3 +54,5 @@ end
 -- Transparent
 vim.api.nvim_set_hl(0, "Normal", { bg = "none", ctermbg = "none" })
 vim.api.nvim_set_hl(0, "NonText", { bg = "none", ctermbg = "none" })
+vim.g.netrw_fastbrowse = 0
+vim.g.netrw_banner = 0

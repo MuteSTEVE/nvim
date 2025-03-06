@@ -36,6 +36,10 @@ map("n", "<C-h>", "<C-w>h", NRS)
 map("n", "<C-j>", "<C-w>j", NRS)
 map("n", "<C-l>", "<C-w>l", NRS)
 map("n", "<C-k>", "<C-w>k", NRS)
+map("t", "<C-h>", "<C-w>h", NRS)
+map("t", "<C-j>", "<C-w>j", NRS)
+map("t", "<C-l>", "<C-w>l", NRS)
+map("t", "<C-k>", "<C-w>k", NRS)
 
 -- Remap the redo ctrl+r it doesn't make any sense
 map("n", "<S-u>", "<C-r>", NRS)
@@ -56,3 +60,5 @@ map({ "i", "n" }, "<Right>", "<cmd>echo 'Use L VScode user!'<CR>", NRS)
 
 -- Fix mouse moving one character after exiting insert mode
 map("i", "<Esc>", "<Esc>`^", NRS)
+
+map("n", "<leader>e", "<cmd>Lex 30<CR>", NRS)
