@@ -1,4 +1,3 @@
--- Local augroup & autocmd
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local clear = { clear = true }
@@ -14,22 +13,17 @@ autocmd("TermOpen", {
   end,
 })
 
--- FileFormat
--- Auto-indent html, php and javascript files
+-- Auto-indent and remove trailing white spaces
 augroup("FileFormat", clear)
 autocmd("BufWritePre", {
   group = "FileFormat",
-  pattern = { "*.html", "*.php", "*.js" },
-  command = "normal mMgg=G'M",
-})
--- Remove trailing space
-autocmd("BufWritePre", {
-  group = "FileFormat",
-  pattern = { "*.py", "*.lua" },
-  command = [[%s/\s\+$//e]],
+  pattern = "*",
+  callback = function()
+    vim.cmd("normal mMgg=G'M")
+    vim.cmd([[%s/\s\+$//e]])
+  end,
 })
 
--- Custom Buffer
 -- Highlight yank
 augroup("CustomBuffer", clear)
 autocmd("TextYankPost", {
