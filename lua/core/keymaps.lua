@@ -54,13 +54,5 @@ map({ "i", "n" }, "<Down>", "<cmd>echo 'Use J VScode user!'<CR>", NRS)
 map({ "i", "n" }, "<Up>", "<cmd>echo 'Use K VScode user!'<CR>", NRS)
 map({ "i", "n" }, "<Right>", "<cmd>echo 'Use L VScode user!'<CR>", NRS)
 
--- Close brackets, parethesis, and quotes insert mode
-map("i", [[']], [[''<Left>]], NRS)
-map("i", [["]], [[""<left>]], NRS)
-map("i", "<", "<><left>", NRS)
-map("i", "(", "()<left>", NRS)
-map("i", "[", "[]<left>", NRS)
-map("i", "{", "{}<left>", NRS)
-
 -- Fix mouse moving one character after exiting insert mode
 map("i", "<Esc>", "<Esc>`^", NRS)
