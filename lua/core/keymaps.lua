@@ -61,4 +61,19 @@ map({ "i", "n" }, "<Right>", "<cmd>echo 'Use L VScode user!'<CR>", NRS)
 -- Fix mouse moving one character after exiting insert mode
 map("i", "<Esc>", "<Esc>`^", NRS)
 
+-- Netrw vertical explorer
 map("n", "<leader>e", "<cmd>Lex 30<CR>", NRS)
+
+-- Neovim builtin-terminal Horizontal
+map("n", "<leader>tj", function ()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 13)
+end)
+-- Neovim builtin-terminal Vertical
+map("n", "<leader>tk", function ()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.api.nvim_win_set_width(0, 50)
+end)
