@@ -9,8 +9,8 @@ local PLUG = {
     { 'hrsh7th/cmp-nvim-lua', event = "InsertEnter" },
     { 'saadparwaiz1/cmp_luasnip', event = "InsertEnter" },
     {
-      'L3MON4D3/LuaSnip',
-      'rafamadriz/friendly-snippets',
+      { 'L3MON4D3/LuaSnip', event = "InsertEnter" },
+      { 'rafamadriz/friendly-snippets', event = "InsertEnter" },
       {
         'ults-io/vscode-react-javascript-snippets',
         build = 'yarn install --frozen-lockfile && yarn compile',
