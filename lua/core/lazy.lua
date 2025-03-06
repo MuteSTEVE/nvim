@@ -33,7 +33,6 @@ lazy.setup({
         "man",
         "matchit",
         "matchparen",
-        "netrwPlugin",
         "nvim",
         "rplugin",
         "spellfile",
