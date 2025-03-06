@@ -4,40 +4,14 @@ local autocmd = vim.api.nvim_create_autocmd
 local clear = { clear = true }
 
 -- TerminalMode
--- Disable statusline in terminal mode
 augroup("TerminalMode", clear)
-autocmd("TermEnter", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set laststatus=0",
-})
-autocmd("TermLeave", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set laststatus=3",
-})
--- Remove annoying message '[Process exitt 05]'
-autocmd("TermClose", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "execute 'bdelete!' . expand('<abuf>')",
-})
--- Always start terminal in insert mode
 autocmd("TermOpen", {
   group = "TerminalMode",
-  pattern = "*",
-  command = "startinsert | set winfixheight",
-})
--- Remove line and relative number
-autocmd("TermOpen", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set nonumber | set norelativenumber",
-})
-autocmd("TermClose", {
-  group = "TerminalMode",
-  pattern = "*",
-  command = "set number | set relativenumber",
+  callback = function()
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+    vim.cmd("startinsert")
+  end,
 })
 
 -- FileFormat
