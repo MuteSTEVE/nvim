@@ -14,6 +14,7 @@ local PLUG = {
       {
         'ults-io/vscode-react-javascript-snippets',
         build = 'yarn install --frozen-lockfile && yarn compile',
+        event = "InsertEnter",
       },
     }
   },

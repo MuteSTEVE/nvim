@@ -49,7 +49,7 @@ function PLUG.config()
 	local buf = vim.lsp.buf
 	local map = vim.keymap.set
 
-	diag.config({ virtual_text = false })
+	diag.config({ virtual_text = true })
 	map("n", "<leader>lf", telescope.lsp_references)
 	map("n", "<leader>ld", telescope.diagnostics)
 	map("n", "gd", function()
