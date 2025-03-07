@@ -1,6 +1,7 @@
 local config = {
   "core.options",
   "core.keymaps",
+  "core.terminal",
   "core.lazy",
   "core.icons",
   "core.autocmd",

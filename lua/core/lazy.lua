@@ -46,4 +46,4 @@ lazy.setup({
 })
 
 local map = vim.keymap.set
-map("n", "<C-l>", "<cmd>Lazy<CR>")
+map("n", "<A-l>", "<cmd>Lazy<CR>")

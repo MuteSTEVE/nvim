@@ -26,20 +26,15 @@ map("v", "<A-j>", "<cmd>m '>+1<CR>gv=gv", NRS)
 map("v", "<A-k>", "<cmd>m '<-2<CR>gv=gv", NRS)
 
 -- Buffer movement
-map("n", "<S-z>", "<cmd>bp<CR>", NRS)
-map("n", "<S-c>", "<cmd>bn<CR>", NRS)
-map("n", "<S-x>", "<cmd>bd<CR>", NRS)
-map("t", "<S-x>", "<cmd>bd!<CR>noh<CR>", NRS) -- Terminal mode
+map("n", "<A-[>", "<cmd>bp<CR>", NRS)
+map("n", "<A-]>", "<cmd>bn<CR>", NRS)
+map("n", "<A-\\>", "<cmd>bd<CR>", NRS)
 
 -- Jump between panes
 map("n", "<C-h>", "<C-w>h", NRS)
 map("n", "<C-j>", "<C-w>j", NRS)
 map("n", "<C-l>", "<C-w>l", NRS)
 map("n", "<C-k>", "<C-w>k", NRS)
-map("t", "<C-h>", "<C-w>h", NRS)
-map("t", "<C-j>", "<C-w>j", NRS)
-map("t", "<C-l>", "<C-w>l", NRS)
-map("t", "<C-k>", "<C-w>k", NRS)
 
 -- Remap the redo ctrl+r it doesn't make any sense
 map("n", "<S-u>", "<C-r>", NRS)
@@ -63,17 +58,3 @@ map("i", "<Esc>", "<Esc>`^", NRS)
 
 -- Netrw vertical explorer
 map("n", "<leader>e", "<cmd>Lex 30<CR>", NRS)
-
--- Neovim builtin-terminal Horizontal
-map("n", "<leader>tj", function ()
-  vim.cmd.vnew()
-  vim.cmd.term()
-  vim.cmd.wincmd("J")
-  vim.api.nvim_win_set_height(0, 13)
-end)
--- Neovim builtin-terminal Vertical
-map("n", "<leader>tk", function ()
-  vim.cmd.vnew()
-  vim.cmd.term()
-  vim.api.nvim_win_set_width(0, 50)
-end)
