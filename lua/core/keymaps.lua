@@ -30,12 +30,6 @@ map("n", "<A-[>", "<cmd>bp<CR>", NRS)
 map("n", "<A-]>", "<cmd>bn<CR>", NRS)
 map("n", "<A-\\>", "<cmd>bd<CR>", NRS)
 
--- Jump between panes
-map("n", "<C-h>", "<C-w>h", NRS)
-map("n", "<C-j>", "<C-w>j", NRS)
-map("n", "<C-l>", "<C-w>l", NRS)
-map("n", "<C-k>", "<C-w>k", NRS)
-
 -- Remap the redo ctrl+r it doesn't make any sense
 map("n", "<S-u>", "<C-r>", NRS)
 

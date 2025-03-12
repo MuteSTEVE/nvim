@@ -7,12 +7,6 @@ map("t", "<A-]>", "<C-\\><C-n><cmd>bn<CR>{}k$<CR>", NRS)
 map("t", "<A-\\>", "<C-\\><C-n><cmd>bd!<CR>noh<CR>", NRS)
 map("t", "<S-Esc>", "<C-\\><C-n><CR>", NRS)
 
--- Jump between panes
-map("t", "<C-h>", "<C-\\><C-n><C-w>h<CR>{}k$", NRS)
-map("t", "<C-j>", "<C-\\><C-n><C-w>j<CR>{}k$", NRS)
-map("t", "<C-k>", "<C-\\><C-n><C-w>k<CR>{}k$", NRS)
-map("t", "<C-l>", "<C-\\><C-n><C-w>l<CR>{}k$", NRS)
-
 -- Neovim builtin-terminal
 map("n", "<leader>tj", function ()
   vim.cmd.vnew()
